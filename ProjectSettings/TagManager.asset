@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: collidable
+    uniqueID: 1770932505
+    locked: 0
