@@ -20,6 +20,11 @@ public class TeacherScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (agent.path.corners.Length > 1)
+        {
+            //Debug.Log(agent.path.corners[1] - agent.path.corners[0]);
+            Debug.Log(agent.path.corners[1]);
+        }
         agent.SetDestination(target.transform.position);
     }
 }
