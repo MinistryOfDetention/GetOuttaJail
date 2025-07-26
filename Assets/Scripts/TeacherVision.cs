@@ -12,12 +12,13 @@ public class TeacherVision : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        teacherScript = GetComponentInParent<TeacherScript>();
+        teacherScript = GetComponentInParent<Transform>().gameObject.GetComponentInParent<TeacherScript>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.tag == "Player" && !teacherScript.target)
+        Debug.Log(other);
+        if (other.tag == "Player")
         {
             // Check if player is obscured before detecting player
             RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, player.transform.position - transform.position);
@@ -38,6 +39,7 @@ public class TeacherVision : MonoBehaviour
                             {
                                 Debug.Log("Player detected");
                                 teacherScript.target = player;
+                                teacherScript.ToggleChasing();
                             }
                         }
                     }
