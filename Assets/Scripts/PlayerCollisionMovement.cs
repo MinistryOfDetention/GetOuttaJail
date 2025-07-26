@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class PlayerCollisionMovement : MonoBehaviour
@@ -9,6 +10,17 @@ public class PlayerCollisionMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
 
+    private Animator bodyAnimator;
+
+    void Awake()
+    {
+        bodyAnimator = GetComponentInChildren<Animator>();
+
+        if (bodyAnimator == null)
+        {
+            Debug.LogError("Animator component not found on PlayerCollisionMovement script.");
+        }
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,10 +37,42 @@ public class PlayerCollisionMovement : MonoBehaviour
         {
             movement = movement.normalized;
         }
+
+        HandleAnimations();
+
     }
 
     void FixedUpdate()
     {
         rb.velocity = movement * moveSpeed;
+    }
+
+    void HandleAnimations()
+    {
+        if (movement.x > 0)
+        {
+            // Move Right
+            bodyAnimator.Play("PlayerMoveRight");
+        }
+        else if (movement.x < 0)
+        {
+            // Move Left
+            bodyAnimator.Play("PlayerMoveLeft");
+        }
+        else if (movement.y > 0)
+        {
+            // Move Up
+            bodyAnimator.Play("PlayerMoveUp");
+        }
+        else if (movement.y < 0)
+        {
+            // Move Down
+            bodyAnimator.Play("PlayerMoveDown");
+        }
+        else
+        {
+            // Idle state, you can set an idle animation if needed
+            bodyAnimator.Play("PlayerIdle");
+        }
     }
 }
