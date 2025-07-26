@@ -1,0 +1,699 @@
+fileFormatVersion: 2
+guid: 4182e6ebf45be4bfdbaddf9aaa137c57
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1823
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc6c46fdb6664de198cd34ea759f3ca
+      internalID: -596346905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1813
+        width: 146
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef3e89db793b409ca341b48e5ac8169
+      internalID: -1588574969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1800
+        width: 143
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e8d61e5643248f09934e365be0e470
+      internalID: 180127285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 1812
+        width: 142
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98de86daa6714910aa06b364e7d047d
+      internalID: 1598094287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1813
+        width: 139
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80132f272d900437885c330469e0a01e
+      internalID: 1634380324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1817
+        width: 142
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902fedd7afb014770b0654f47787c695
+      internalID: -1786951776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 1819
+        width: 95
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081f4d9f978754b16a9192dc1a999389
+      internalID: -1603904890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1827
+        width: 98
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b669b7d1b7efd41e9911478fbdb27ac8
+      internalID: -1487150046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1658
+        width: 97
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc126af4ecc8447d965a23a88a8dc30
+      internalID: -336367009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1662
+        width: 98
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65f9452e8fd04d229160f10724be1d6
+      internalID: -491220513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1657
+        width: 97
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56723eb8821cb4383beeb8ef11d4d59d
+      internalID: -1315007969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1649
+        width: 98
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bfbce9032fa47819c74af1f2015fa4
+      internalID: -358423714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 1651
+        width: 99
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecfe48ae950948d38d7a2b8f3bfadc3
+      internalID: -1014259505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1657
+        width: 97
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589799b09b4bf4096ad38be133b18cd6
+      internalID: 863458581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1656
+        width: 99
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b21049061cbb4ced91c9f0c2d81aec6
+      internalID: -34279162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 1658
+        width: 100
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48ff30fbe08f4a168dbd5356ce819cd
+      internalID: 906141493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1489
+        width: 88
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e383038e0bbcb44bba18fbaa1a21c86f
+      internalID: 1292790416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1484
+        width: 77
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77375c2e133c45bbaeedab8de008f74
+      internalID: -871322144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1488
+        width: 89
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1928029756c4b29a3a894a6415127d
+      internalID: 366997168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1488
+        width: 95
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d170e8ff3139a4693af70b446f46beba
+      internalID: -1106696901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1487
+        width: 95
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e50acc787d6046b69e295f32b3efaae
+      internalID: 335899023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1483
+        width: 88
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d2a2d9ae7054dd1b39638d86770498
+      internalID: -982523663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1486
+        width: 86
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973db5fb67ffd470889612ab929511bc
+      internalID: -1906723814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 1487
+        width: 102
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e49d041353a4daa8744fd927acf0b9
+      internalID: -1623269953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1315
+        width: 98
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282f02a55a0624b70bcbfa5edc7118c8
+      internalID: 1542729578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleTeacher1_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1313
+        width: 100
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5689c7f289d04420493b073d268f4b64
+      internalID: 492073951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FemaleTeacher1_SpriteSheet_0: -596346905
+      FemaleTeacher1_SpriteSheet_1: -1588574969
+      FemaleTeacher1_SpriteSheet_10: -1315007969
+      FemaleTeacher1_SpriteSheet_11: -358423714
+      FemaleTeacher1_SpriteSheet_12: -1014259505
+      FemaleTeacher1_SpriteSheet_13: 863458581
+      FemaleTeacher1_SpriteSheet_14: -34279162
+      FemaleTeacher1_SpriteSheet_15: 906141493
+      FemaleTeacher1_SpriteSheet_16: 1292790416
+      FemaleTeacher1_SpriteSheet_17: -871322144
+      FemaleTeacher1_SpriteSheet_18: 366997168
+      FemaleTeacher1_SpriteSheet_19: -1106696901
+      FemaleTeacher1_SpriteSheet_2: 180127285
+      FemaleTeacher1_SpriteSheet_20: 335899023
+      FemaleTeacher1_SpriteSheet_21: -982523663
+      FemaleTeacher1_SpriteSheet_22: -1906723814
+      FemaleTeacher1_SpriteSheet_23: -1623269953
+      FemaleTeacher1_SpriteSheet_24: 1542729578
+      FemaleTeacher1_SpriteSheet_25: 492073951
+      FemaleTeacher1_SpriteSheet_3: 1598094287
+      FemaleTeacher1_SpriteSheet_4: 1634380324
+      FemaleTeacher1_SpriteSheet_5: -1786951776
+      FemaleTeacher1_SpriteSheet_6: -1603904890
+      FemaleTeacher1_SpriteSheet_7: -1487150046
+      FemaleTeacher1_SpriteSheet_8: -336367009
+      FemaleTeacher1_SpriteSheet_9: -491220513
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

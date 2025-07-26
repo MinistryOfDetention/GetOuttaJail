@@ -28,8 +28,16 @@ public class TeacherScript : MonoBehaviour
     public float waitTime = 0.0f;
     private float defaultWaitTime = 1.0f;
 
+    private Animator animator;
+    private Vector2 lastDirection = Vector2.zero;
+
     void Start()
-    {
+    {   
+        animator = GetComponentInChildren<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError("Animator component not found on TeacherScript.");
+        } 
         visionCone = transform.GetChild(0);
         nextDest = transform.position;
 
@@ -216,6 +224,10 @@ public class TeacherScript : MonoBehaviour
                 var nextHop = Astar();
                 nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
             }
+
+            // Move towards the next destination
+            Vector2 direction = (nextDest - transform.position).normalized;
+            HandleAnimation(direction);
             transform.position = Vector3.MoveTowards(transform.position, nextDest, speed * Time.deltaTime);
         }
     }
@@ -238,5 +250,46 @@ public class TeacherScript : MonoBehaviour
     {
         isPatrolling = false;
         isChasing = true;
+    }
+
+    void HandleAnimation(Vector2 direction)
+    {
+        if (direction == Vector2.zero)
+        {
+            if (lastDirection == Vector2.up)
+            {
+                animator.Play("MaleTeacherIdleDown");
+            }
+            else if (lastDirection == Vector2.down)
+            {
+                animator.Play("MaleTeacherIdleUp");
+            }
+            else if (lastDirection == Vector2.left)
+            {
+                animator.Play("MaleTeacherIdleRight");
+            }
+            else if (lastDirection == Vector2.right)
+            {
+                animator.Play("MaleTeacherIdleLeft");
+            }
+            return;
+        }
+        else if (direction.x > 0)
+        {
+            animator.Play("MaleTeacherMoveRight");
+        }
+        else if (direction.x < 0)
+        {
+            animator.Play("MaleTeacherMoveLeft");
+        }
+        else if (direction.y > 0)
+        {
+            animator.Play("MaleTeacherMoveUp");
+        }
+        else if (direction.y < 0)
+        {
+            animator.Play("MaleTeacherMoveDown");
+        }
+        lastDirection = direction;
     }
 }
