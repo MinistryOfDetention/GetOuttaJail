@@ -1,0 +1,875 @@
+fileFormatVersion: 2
+guid: ac680797fc5ff4c83908e84f7674a2cc
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CustomSchoolAssets_0
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1392
+        width: 106
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee8f18c598f7421c8c9175b7529bfd0
+      internalID: -13598540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_1
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1275
+        width: 162
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11cac41e455c343d8910053ce3094462
+      internalID: 1826650679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_2
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1269
+        width: 164
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691c2e39cec3a46d99ea67a04729122a
+      internalID: -159638077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_3
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1264
+        width: 167
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ecc3a0f87c14534bcfbf0e217aca4a
+      internalID: 1045025335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_4
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 1264
+        width: 167
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3221d61f90542d1ab6909ac6b5c714
+      internalID: 1313081388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_5
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1281
+        width: 120
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604561f3ea70e4108a054cac58316b2e
+      internalID: 249072813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_6
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1152
+        width: 126
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e8c7844c51e4a8293b43dc06637b01
+      internalID: 574681340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_7
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1157
+        width: 105
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec11e686a4481451bbe768b714e475b9
+      internalID: -1745632118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_8
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1146
+        width: 48
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660876bf434304f189b7adedb83308f5
+      internalID: 488244681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_9
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 910
+        width: 156
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44bbafa1fa8448198b1bef2fb9c157d
+      internalID: -90252103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_10
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 901
+        width: 157
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2e90447e90c40beae421df5d726e96
+      internalID: 89142462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_11
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 892
+        width: 56
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318ec482714a0428e98bcf2c25d3bc0a
+      internalID: -1052084940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_12
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 930
+        width: 78
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4332df01d10274b5693d5f559f5bdd44
+      internalID: -452324946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_13
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 933
+        width: 76
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aff9dc1c85f743ad82e7ef3f2819d6b
+      internalID: -42806769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_14
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 905
+        width: 78
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d79a92b21d5432196902c004946b6a
+      internalID: 1588744943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_15
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1041
+        width: 192
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26a4a061ce3048aabc1d27932854d73
+      internalID: -612835292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_16
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 933
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec608a1bee9c4460e98a8d43c3097855
+      internalID: -2109155886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_17
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 891
+        width: 256
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef7b74ccf90e4256bf221ff10edf365
+      internalID: -2022618426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_18
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 765
+        width: 144
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03dc5fdcb339648b88653e1e65badbb8
+      internalID: 993633741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 775
+        width: 134
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7e8038cf7dd486bb43963d36379ab5
+      internalID: -1121064713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_20
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 766
+        width: 87
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6765152c6ff6c4c2c824ee9d592f5e9a
+      internalID: -453172223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_21
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 565
+        width: 155
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad3193d28b4d499eb7d265b1397e375
+      internalID: -1987326511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_22
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 672
+        width: 242
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a0559e5371e470eb5f4c69d3fb08b9
+      internalID: 1579019663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_23
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 716
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae47e3c491652477b80fbfa9682614f4
+      internalID: 42590882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_24
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 713
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893390ece6e7340188026aa069239896
+      internalID: -759668024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_25
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 538
+        width: 133
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6f49ae3d7aa480b98e9e7c100a6f82
+      internalID: 236856638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_26
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 537
+        width: 204
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e571f20e44250435ba956564af871af0
+      internalID: 49864967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_27
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 539
+        width: 202
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29141bcfca8d45a499836574dfeca3a
+      internalID: 161729884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_28
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 557
+        width: 85
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b8f7c5830324eaab23f4f3118986e7
+      internalID: -1669722002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_29
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 406
+        width: 235
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7659f7407dfd14abd88fabe6b4896cc9
+      internalID: -871536650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_30
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 404
+        width: 227
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95257a9c3f124cadba36023ee2a6154
+      internalID: 341156776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_31
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 327
+        width: 99
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729e691c2f9f64717afff88818b306a8
+      internalID: -1885243605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_32
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 334
+        width: 92
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f868c0d5fd54932924f962431150e1
+      internalID: 175197920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomSchoolAssets_33
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 345
+        width: 96
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac85201d161354b988d532166a287385
+      internalID: 292500133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      CustomSchoolAssets_0: -13598540
+      CustomSchoolAssets_1: 1826650679
+      CustomSchoolAssets_10: 89142462
+      CustomSchoolAssets_11: -1052084940
+      CustomSchoolAssets_12: -452324946
+      CustomSchoolAssets_13: -42806769
+      CustomSchoolAssets_14: 1588744943
+      CustomSchoolAssets_15: -612835292
+      CustomSchoolAssets_16: -2109155886
+      CustomSchoolAssets_17: -2022618426
+      CustomSchoolAssets_18: 993633741
+      CustomSchoolAssets_19: -1121064713
+      CustomSchoolAssets_2: -159638077
+      CustomSchoolAssets_20: -453172223
+      CustomSchoolAssets_21: -1987326511
+      CustomSchoolAssets_22: 1579019663
+      CustomSchoolAssets_23: 42590882
+      CustomSchoolAssets_24: -759668024
+      CustomSchoolAssets_25: 236856638
+      CustomSchoolAssets_26: 49864967
+      CustomSchoolAssets_27: 161729884
+      CustomSchoolAssets_28: -1669722002
+      CustomSchoolAssets_29: -871536650
+      CustomSchoolAssets_3: 1045025335
+      CustomSchoolAssets_30: 341156776
+      CustomSchoolAssets_31: -1885243605
+      CustomSchoolAssets_32: 175197920
+      CustomSchoolAssets_33: 292500133
+      CustomSchoolAssets_4: 1313081388
+      CustomSchoolAssets_5: 249072813
+      CustomSchoolAssets_6: 574681340
+      CustomSchoolAssets_7: -1745632118
+      CustomSchoolAssets_8: 488244681
+      CustomSchoolAssets_9: -90252103
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
