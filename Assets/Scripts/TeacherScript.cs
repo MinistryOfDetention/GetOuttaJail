@@ -14,11 +14,19 @@ public class TeacherScript : MonoBehaviour
     public GameObject target;
     public Tilemap tilemap;
     public Transform visionCone;
+    public Transform[] patrolWaypoints;
+    public int currentPatrolWaypointIndex = 0;
 
     public float speed;
     private UnityEngine.AI.NavMeshAgent agent;
     private Vector3 nextDest;
     private bool playerDetected = false;
+
+    private bool isPatrolling = true;
+    private bool isChasing = false;
+
+    public float waitTime = 0.0f;
+    private float defaultWaitTime = 1.0f;
 
     private Animator animator;
     private Vector2 lastDirection = Vector2.zero;
@@ -32,8 +40,12 @@ public class TeacherScript : MonoBehaviour
         } 
         visionCone = transform.GetChild(0);
         nextDest = transform.position;
-    }
 
+        if (isPatrolling && currentPatrolWaypointIndex < patrolWaypoints.Length)
+        {
+            target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
+        }
+    }
 
     class Node
     {
@@ -173,10 +185,36 @@ public class TeacherScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isPatrolling)
+        {
+            if (waitTime > 0)
+            {
+                waitTime -= Time.deltaTime;
+                if (waitTime <= 0)
+                {
+                    currentPatrolWaypointIndex++;
+                    if (currentPatrolWaypointIndex >= patrolWaypoints.Length)
+                    {
+                        currentPatrolWaypointIndex = 0;
+                    }
+
+                    target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
+                }
+            }
+            else
+            {
+                float distanceToTarget = Vector3.Magnitude(target.transform.position - transform.position);
+                if (isPatrolling && distanceToTarget < 1.0f)
+                {
+                    waitTime = defaultWaitTime;
+                }
+            }
+        }
+
 
         if (target)
         {
-            // Face the target (most likely the player)
+            // Face the target (either the player or patrol waypoint)
             Vector2 targ = new Vector2(target.transform.position.x - transform.position.x, target.transform.position.y - transform.position.y);
             float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg - 90f;
             visionCone.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
@@ -200,6 +238,18 @@ public class TeacherScript : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    public void TogglePatrolling()
+    {
+        isPatrolling = true;
+        isChasing = false;
+    }
+
+    public void ToggleChasing()
+    {
+        isPatrolling = false;
+        isChasing = true;
     }
 
     void HandleAnimation(Vector2 direction)
