@@ -209,36 +209,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 238423300855911710, guid: 1fa8a16b151094ed7919b1812e7e3862, type: 3}
   m_PrefabInstance: {fileID: 2265254436132597088}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &534846391 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7223323252355803773, guid: b25b23973451be046a37337a2060607d, type: 3}
-  m_PrefabInstance: {fileID: 5094107713187572926}
-  m_PrefabAsset: {fileID: 0}
---- !u!210 &534846397
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534846391}
-  m_Enabled: 1
-  m_SortingLayerID: 1770932505
-  m_SortingLayer: 1
-  m_SortingOrder: 10
-  m_SortAtRoot: 0
---- !u!114 &534846398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534846391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd9dbb184ffbc42dea6452dce715a787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultShowTime: 3
 --- !u!1 &601646842
 GameObject:
   m_ObjectHideFlags: 0
@@ -3655,10 +3625,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1080809196}
     - target: {fileID: 3053554144868998197, guid: b25b23973451be046a37337a2060607d, type: 3}
-      propertyPath: patrolWaypoints.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3053554144868998197, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: patrolWaypoints.Array.data[0]
       value: 
       objectReference: {fileID: 2120869920}
@@ -3666,59 +3632,10 @@ PrefabInstance:
       propertyPath: patrolWaypoints.Array.data[1]
       value: 
       objectReference: {fileID: 1235683376}
-    - target: {fileID: 3684254847649825080, guid: b25b23973451be046a37337a2060607d, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805992887438520258, guid: b25b23973451be046a37337a2060607d, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805992887438520258, guid: b25b23973451be046a37337a2060607d, type: 3}
-      propertyPath: m_fontSize
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805992887438520258, guid: b25b23973451be046a37337a2060607d, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805992887438520258, guid: b25b23973451be046a37337a2060607d, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805992887438520258, guid: b25b23973451be046a37337a2060607d, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805992887438520258, guid: b25b23973451be046a37337a2060607d, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805992887438520258, guid: b25b23973451be046a37337a2060607d, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278190080
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223323252355803773, guid: b25b23973451be046a37337a2060607d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925668127991415170, guid: b25b23973451be046a37337a2060607d, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 340a8487af2814fce8b4a7c6250ea5c7, type: 2}
-    m_RemovedComponents:
-    - {fileID: 4063222459632690528, guid: b25b23973451be046a37337a2060607d, type: 3}
-    - {fileID: 2274900186454859056, guid: b25b23973451be046a37337a2060607d, type: 3}
-    - {fileID: 9130185250010578133, guid: b25b23973451be046a37337a2060607d, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7223323252355803773, guid: b25b23973451be046a37337a2060607d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 534846397}
-    - targetCorrespondingSourceObject: {fileID: 7223323252355803773, guid: b25b23973451be046a37337a2060607d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 534846398}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b25b23973451be046a37337a2060607d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
