@@ -14,7 +14,7 @@ public class Inventory : MonoBehaviour
         Debug.Log("Current Inventory: ");
         foreach (GameObject i in items)
         {
-            Debug.Log(i.name);
+            //Debug.Log(i.name);
         }
     }
 
