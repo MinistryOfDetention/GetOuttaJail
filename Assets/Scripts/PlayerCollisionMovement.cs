@@ -9,6 +9,8 @@ public class PlayerCollisionMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 movement;
+    private float previousHorizontal;
+    private float previousVertical;
 
     private Animator bodyAnimator;
 
@@ -31,15 +33,49 @@ public class PlayerCollisionMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        movement = new Vector2(horizontal, vertical);
+        bool horizontalChanged = horizontal != previousHorizontal;
+        bool verticalChanged = vertical != previousVertical;
 
-        if (movement.magnitude > 1)
+        if (Mathf.Abs(horizontal) > 0 && Mathf.Abs(vertical) > 0)
         {
-            movement = movement.normalized;
+            if (horizontalChanged && !verticalChanged)
+            {
+                movement = new Vector2(horizontal, 0);
+            }
+            else if (verticalChanged && !horizontalChanged)
+            {
+                movement = new Vector2(0, vertical);
+            }
+            else if (horizontalChanged && verticalChanged)
+            {
+                if (movement.x != 0)
+                {
+                    movement = new Vector2(horizontal, 0);
+                }
+                else
+                {
+                    movement = new Vector2(0, vertical);
+                }
+            }
+        }
+        else if (Mathf.Abs(horizontal) > 0)
+        {
+            movement = new Vector2(horizontal, 0);
+        }
+        else if (Mathf.Abs(vertical) > 0)
+        {
+            movement = new Vector2(0, vertical);
+        }
+        else
+        {
+            movement = Vector2.zero;
         }
 
         HandleAnimations();
 
+
+        previousHorizontal = horizontal;
+        previousVertical = vertical;
     }
 
     void FixedUpdate()
