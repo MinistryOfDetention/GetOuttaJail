@@ -1,31 +1,181 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using NavMeshPlus.Extensions;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class TeacherScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
     public GameObject target;
+    public Tilemap tilemap;
 
+    public float speed;
     private UnityEngine.AI.NavMeshAgent agent;
+    private Vector3 nextDest;
     void Start()
     {
+        /*
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
+		agent.updateRotation = false;
+		agent.updateUpAxis = false;
+        */
+        nextDest = transform.position;
+    }
+
+
+    class Node
+    {
+        public Vector3Int pos;
+        public Node reachedFrom;
+
+        public int predictedCost;
+        public int cost;
+        public Node(Vector3Int p)
+        {
+            pos = p;
+        }
+    }
+
+
+    List<Node> getNeighbours(Node n)
+    {
+        var up = n.pos + Vector3Int.up;
+        var down = n.pos + Vector3Int.down;
+        var left = n.pos + Vector3Int.left;
+        var right = n.pos + Vector3Int.right;
+        var neighbours = new List<Node>();
+
+        if (tilemap.GetTile(up) == null)
+        {
+            neighbours.Add(new Node(up));
+        }
+
+
+        if (tilemap.GetTile(down) == null)
+        {
+            neighbours.Add(new Node(down));
+        }
+
+
+        if (tilemap.GetTile(left) == null)
+        {
+            neighbours.Add(new Node(left));
+        }
+
+
+        if (tilemap.GetTile(right) == null)
+        {
+            neighbours.Add(new Node(right));
+        }
+
+        return neighbours;
+    }
+
+    int cost(Node n, Node dest)
+    {
+        // returns manhattan distance
+        var diff = n.pos - dest.pos;
+        return (Math.Abs(diff.x) + Math.Abs(diff.y));
+    }
+
+    void insert(LinkedList<Node> q, Node n)
+    {
+        // Insert using O(n) linear search
+        if (q.Count == 0)
+        {
+            q.AddFirst(n);
+            return;
+        }
+
+        LinkedListNode<Node> current = q.First;
+
+        while (current != null) {
+            if (n.predictedCost < current.Value.predictedCost)
+            {
+                q.AddBefore(current, n);
+                return;
+            }
+            current = current.Next;
+        }
+        //If predicted cost not smaller than any of them
+        q.AddAfter(q.Last, n);
+    }
+
+    Vector3Int Astar()
+    {
+        var start = new Node(tilemap.WorldToCell(transform.position));
+        var dest = new Node(tilemap.WorldToCell(target.transform.position));
+
+        start.cost = 0;
+        start.predictedCost = start.cost + cost(start, dest);
+
+        var q = new LinkedList<Node>();
+        insert(q, start);
+
+        var nextHop = Vector3Int.zero;
+
+        //int maxSteps = 100;
+        //int steps = 0;
+
+        while (q.Count > 0)
+        {
+            /*
+            steps++;
+            if (steps > maxSteps)
+            {
+                break;
+            }
+            */
+            var n = q.First.Value;
+            q.RemoveFirst();
+
+            //Debug.Log(n.pos);
+
+            if (cost(n, dest) == 0)
+            {
+                // We have found the destination.
+                //Debug.Log("found at " + n.pos);
+                
+                while (n.reachedFrom != null && n.reachedFrom != start)
+                {
+                    n = n.reachedFrom;
+                }
+                nextHop = n.pos;
+                break;
+            }
+
+            foreach (var neigbour in getNeighbours(n))
+            {
+                neigbour.cost = n.cost + 1;
+                neigbour.predictedCost = neigbour.cost + cost(neigbour, dest);
+                neigbour.reachedFrom = n;
+
+                insert(q, neigbour);
+            }
+        }
+        
+        return nextHop;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (agent.path.corners.Length > 1)
-        {
-            Debug.Log(agent.path.corners[1]);
-        }
+        /*
         agent.SetDestination(target.transform.position);
+        */
+        if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
+        {
+            var nextHop = Astar();
+            nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
+        }
+        
+        transform.position = Vector3.MoveTowards(transform.position, nextDest, speed * Time.deltaTime);
+        //Debug.Log(nextHop);
     }
 
     void OnTriggerEnter2D(Collider2D other)
