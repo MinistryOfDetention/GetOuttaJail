@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using NavMeshPlus.Extensions;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TeacherScript : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class TeacherScript : MonoBehaviour
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
+        
         // Wait to be given a target (e.g., by the EnemyVision script)
     }
 
@@ -24,7 +25,6 @@ public class TeacherScript : MonoBehaviour
     {
         if (agent.path.corners.Length > 1)
         {
-            //Debug.Log(agent.path.corners[1] - agent.path.corners[0]);
             Debug.Log(agent.path.corners[1]);
         }
 
@@ -36,6 +36,14 @@ public class TeacherScript : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
             agent.SetDestination(target.transform.position);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

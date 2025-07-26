@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorCollision : MonoBehaviour
 {
@@ -19,5 +20,9 @@ public class DoorCollision : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Door collision detected with: " + other.gameObject.name);
+        if (other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }
