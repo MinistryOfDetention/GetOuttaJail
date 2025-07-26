@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3053554144868998197}
   - component: {fileID: 5202607504160097919}
   m_Layer: 0
-  m_Name: Teacher
+  m_Name: Female Teacher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,7 +290,7 @@ SpriteRenderer:
   m_SortingLayerID: 1770932505
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1453912087, guid: 5a2c4cfc2018442d997eaaa0a82dd119, type: 3}
+  m_Sprite: {fileID: -596346905, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -574,7 +574,7 @@ SpriteRenderer:
   m_SortingLayerID: 1770932505
   m_SortingLayer: 1
   m_SortingOrder: -1
-  m_Sprite: {fileID: 1010176979, guid: 5a2c4cfc2018442d997eaaa0a82dd119, type: 3}
+  m_Sprite: {fileID: -336367009, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -595,7 +595,7 @@ Animator:
   m_GameObject: {fileID: 7519249275503715756}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 340a8487af2814fce8b4a7c6250ea5c7, type: 2}
+  m_Controller: {fileID: 9100000, guid: a7c3bdb8f76d54368a7ddcbdbd19056f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
