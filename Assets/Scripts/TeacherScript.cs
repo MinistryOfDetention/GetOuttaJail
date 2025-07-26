@@ -13,6 +13,7 @@ public class TeacherScript : MonoBehaviour
 
     public GameObject target;
     public Tilemap tilemap;
+    public Transform visionCone;
 
     public float speed;
     private UnityEngine.AI.NavMeshAgent agent;
@@ -21,6 +22,7 @@ public class TeacherScript : MonoBehaviour
 
     void Start()
     {
+        visionCone = transform.GetChild(0);
         nextDest = transform.position;
     }
 
@@ -169,7 +171,7 @@ public class TeacherScript : MonoBehaviour
             // Face the target (most likely the player)
             Vector2 targ = new Vector2(target.transform.position.x - transform.position.x, target.transform.position.y - transform.position.y);
             float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg - 90f;
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            visionCone.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
             if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
             {
