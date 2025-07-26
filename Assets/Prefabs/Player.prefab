@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1529055326323919790}
   - component: {fileID: 1851794311498515133}
   - component: {fileID: 2506211717399661578}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DIalogue Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3785619158061989125}
   - component: {fileID: 7800467571247907311}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MaskSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 666631414088723413}
   - component: {fileID: 9046621292723000292}
   - component: {fileID: 8195250254736370702}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BodySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2164737185832614345}
   - component: {fileID: 8297416773943963352}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HeadSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 32183399222068619}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 4220951761077271045}
   - component: {fileID: 965867537873602381}
   - component: {fileID: 329072082632959216}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -572,6 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  penBulletPrefab: {fileID: 0}
 --- !u!114 &4220951761077271045
 MonoBehaviour:
   m_ObjectHideFlags: 0
