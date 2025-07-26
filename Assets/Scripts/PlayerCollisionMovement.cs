@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
@@ -6,13 +7,14 @@ using UnityEngine;
 public class PlayerCollisionMovement : MonoBehaviour
 {
     public float moveSpeed = 5;
-
+    public GameObject penBulletPrefab;
     private Rigidbody2D rb;
     private Vector2 movement;
     private float previousHorizontal;
     private float previousVertical;
 
     private Animator bodyAnimator;
+
 
     void Awake()
     {
@@ -32,6 +34,7 @@ public class PlayerCollisionMovement : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
+
 
         bool horizontalChanged = horizontal != previousHorizontal;
         bool verticalChanged = vertical != previousVertical;
@@ -76,6 +79,13 @@ public class PlayerCollisionMovement : MonoBehaviour
 
         previousHorizontal = horizontal;
         previousVertical = vertical;
+
+        if (Input.GetKeyDown("right shift"))
+        {
+            var bulletRotationAngle = Vector3.SignedAngle(Vector3.up, movement, Vector3.forward);
+            var bulletRotation = Quaternion.AngleAxis(bulletRotationAngle, Vector3.forward);
+            GameObject penBullet = (GameObject)Instantiate(penBulletPrefab, transform.position, bulletRotation);
+        }
     }
 
     void FixedUpdate()

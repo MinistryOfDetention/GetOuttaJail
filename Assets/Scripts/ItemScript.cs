@@ -23,14 +23,14 @@ public class ItemScript : MonoBehaviour
             Inventory inventory = other.GetComponent<Inventory>();
             if (inventory != null)
             {
-                Debug.Log("Item collision detected with: " + other.gameObject.name);
+                //Debug.Log("Item collision detected with: " + other.gameObject.name);
                 inventory.AddItem(gameObject);
                 gameObject.SetActive(false);
             }
         }
         else
         {
-            Debug.Log("Item collision with non-player object: " + other.gameObject.name);
+            //Debug.Log("Item collision with non-player object: " + other.gameObject.name);
         }
     }
 }

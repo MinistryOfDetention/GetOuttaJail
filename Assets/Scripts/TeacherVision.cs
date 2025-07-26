@@ -17,7 +17,7 @@ public class TeacherVision : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log(other);
+        //Debug.Log(other);
         if (other.tag == "Player")
         {
             // Check if player is obscured before detecting player
