@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.8
+  itemPrefab: {fileID: 417463587097914924, guid: 9ae4cf41f5b534e48b9a174e4f1bb774, type: 3}
 --- !u!1839735485 &-479254075737085862
 Tilemap:
   m_ObjectHideFlags: 0
