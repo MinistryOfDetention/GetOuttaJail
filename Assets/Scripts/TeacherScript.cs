@@ -258,37 +258,37 @@ public class TeacherScript : MonoBehaviour
         {
             if (lastDirection == Vector2.up)
             {
-                animator.Play("MaleTeacherIdleDown");
+                animator.Play("TeacherIdleDown");
             }
             else if (lastDirection == Vector2.down)
             {
-                animator.Play("MaleTeacherIdleUp");
+                animator.Play("TeacherIdleUp");
             }
             else if (lastDirection == Vector2.left)
             {
-                animator.Play("MaleTeacherIdleRight");
+                animator.Play("TeacherIdleRight");
             }
             else if (lastDirection == Vector2.right)
             {
-                animator.Play("MaleTeacherIdleLeft");
+                animator.Play("TeacherIdleLeft");
             }
             return;
         }
         else if (direction.x > 0)
         {
-            animator.Play("MaleTeacherMoveRight");
+            animator.Play("TeacherMoveRight");
         }
         else if (direction.x < 0)
         {
-            animator.Play("MaleTeacherMoveLeft");
+            animator.Play("TeacherMoveLeft");
         }
         else if (direction.y > 0)
         {
-            animator.Play("MaleTeacherMoveUp");
+            animator.Play("TeacherMoveUp");
         }
         else if (direction.y < 0)
         {
-            animator.Play("MaleTeacherMoveDown");
+            animator.Play("TeacherMoveDown");
         }
         lastDirection = direction;
     }
