@@ -41,20 +41,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6337991271306849835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c99f08a71d4be042b5dce693e2f0793, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f21d62e20f614558b9896715630764d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sentences:
-  - Hi
-  - Testing stuff
-  - Nothing to see here
+  sentences: []
   index: 0
   typingSpeed: 0
   initialWaitTime: 1
   defaultSentenceWaitTime: 1.5
   sentenceWaitTime: 0
-  speakers:
-  - {fileID: 0}
+  speakers: []
   currentSpeaker: {fileID: 0}
   speakerIndex: 0
   dialogueEnd: 0
