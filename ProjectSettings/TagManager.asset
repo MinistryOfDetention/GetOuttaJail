@@ -44,3 +44,6 @@ TagManager:
   - name: collidable
     uniqueID: 1770932505
     locked: 0
+  - name: overlay
+    uniqueID: 2867989081
+    locked: 0

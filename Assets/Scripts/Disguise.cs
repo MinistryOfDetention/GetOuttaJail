@@ -8,7 +8,15 @@ public class Disguise : MonoBehaviour
     // List of unlocked disguises
     public string[] unlockedDisguises = new string[] { "None", "Cleaner", "Teacher" };
 
+    public Sprite[] disguiseSprites;
+    public SpriteRenderer disguiseRenderer;
+
     public int currentDisguise = 0;
+
+    void Start()
+    {
+        Debug.Log(unlockedDisguises);
+    }
 
     void Update()
     {
@@ -26,6 +34,16 @@ public class Disguise : MonoBehaviour
         {
             currentDisguise = 0;
         }
+
+        if (currentDisguise < disguiseSprites.Length)
+        {
+            disguiseRenderer.sprite = disguiseSprites[currentDisguise];
+        }
+        else
+        {
+            Debug.LogWarning("No sprite assigned for current disguise index: " + currentDisguise);
+        }
+        Debug.Log("Switched to disguise: " + unlockedDisguises[currentDisguise]);
     }
 
 }
