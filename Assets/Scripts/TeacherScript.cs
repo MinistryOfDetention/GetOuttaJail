@@ -16,7 +16,7 @@ public class TeacherScript : MonoBehaviour
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        
+
         // Wait to be given a target (e.g., by the EnemyVision script)
     }
 
