@@ -413,30 +413,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 238423300855911710, guid: 1fa8a16b151094ed7919b1812e7e3862, type: 3}
   m_PrefabInstance: {fileID: 785540182}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &939064826 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9205322741146173698, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
-  m_PrefabInstance: {fileID: 1510145755}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &939064832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939064826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e4cf26a9ec87c24cbabe0b56732e2b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unlockedDisguises:
-  - None
-  - Circle
-  - Square
-  - Triangle
-  - Egg
-  currentDisguise: 0
 --- !u!1 &1080809193
 GameObject:
   m_ObjectHideFlags: 0
@@ -3199,10 +3175,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2719270405913662522, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6396519636273914979, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.44
@@ -3243,30 +3215,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8297416773943963352, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8810242234178142906, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9032147739397921702, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9032147739397921702, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9032147739397921702, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9046621292723000292, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9205322741146173698, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3274,13 +3222,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9205322741146173698, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 939064832}
-    - targetCorrespondingSourceObject: {fileID: 2719270405913662522, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
 --- !u!1 &1554895888
 GameObject:
