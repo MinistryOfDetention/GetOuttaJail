@@ -17,13 +17,10 @@ public class TeacherScript : MonoBehaviour
     public float speed;
     private UnityEngine.AI.NavMeshAgent agent;
     private Vector3 nextDest;
+    private bool playerDetected = false;
+
     void Start()
     {
-        /*
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-		agent.updateRotation = false;
-		agent.updateUpAxis = false;
-        */
         nextDest = transform.position;
     }
 
@@ -94,7 +91,8 @@ public class TeacherScript : MonoBehaviour
 
         LinkedListNode<Node> current = q.First;
 
-        while (current != null) {
+        while (current != null)
+        {
             if (n.predictedCost < current.Value.predictedCost)
             {
                 q.AddBefore(current, n);
@@ -140,7 +138,7 @@ public class TeacherScript : MonoBehaviour
             {
                 // We have found the destination.
                 //Debug.Log("found at " + n.pos);
-                
+
                 while (n.reachedFrom != null && n.reachedFrom != start)
                 {
                     n = n.reachedFrom;
@@ -158,24 +156,29 @@ public class TeacherScript : MonoBehaviour
                 insert(q, neigbour);
             }
         }
-        
+
         return nextHop;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
-        agent.SetDestination(target.transform.position);
-        */
-        if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
+
+        if (target)
         {
-            var nextHop = Astar();
-            nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
+            // Face the target (most likely the player)
+            Vector2 targ = new Vector2(target.transform.position.x - transform.position.x, target.transform.position.y - transform.position.y);
+            float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg - 90f;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+            if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
+            {
+                var nextHop = Astar();
+                nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
+            }
+
+            transform.position = Vector3.MoveTowards(transform.position, nextDest, speed * Time.deltaTime);
         }
-        
-        transform.position = Vector3.MoveTowards(transform.position, nextDest, speed * Time.deltaTime);
-        //Debug.Log(nextHop);
     }
 
     void OnTriggerEnter2D(Collider2D other)
