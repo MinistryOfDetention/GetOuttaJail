@@ -8,13 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NonLevelScenes/MainMenu.unity
     guid: 8307ad41206244a199f5581e8c81b66f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/classroom.unity
     guid: 2efc5f91b3efa47c3804713b6e09be33
   - enabled: 1
     path: Assets/Scenes/bathroom.unity
     guid: ecc2ac827fe84f146bb162cdec418383
+  - enabled: 1
+    path: Assets/Scenes/Detention.unity
+    guid: 3abfad10e5dfce444a8eedae5639024f
+  - enabled: 1
+    path: Assets/Scenes/hallway1.unity
+    guid: 8c12bbbb358474a029b536a2f70c2498
   m_configObjects: {}
