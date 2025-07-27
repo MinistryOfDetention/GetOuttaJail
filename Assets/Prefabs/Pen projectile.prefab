@@ -50,6 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6.79
   itemDrop: {fileID: 0}
+  penDropSound: {fileID: 8300000, guid: 493c06029c33a4b8392ea5e656529548, type: 3}
+  penShotSound: {fileID: 8300000, guid: 6f59ea2665d9b4ca991c52d793d2191b, type: 3}
 --- !u!1839735485 &-479254075737085862
 Tilemap:
   m_ObjectHideFlags: 0
