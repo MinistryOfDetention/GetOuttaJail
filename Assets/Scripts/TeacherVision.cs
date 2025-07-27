@@ -9,12 +9,14 @@ public class TeacherVision : MonoBehaviour
 
     // 0 = Circle, 1 = Square, 2 = Triangle
     public int[] canSeeThroughDisguises = new int[] { 0 };
+    private SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         teacherScript = GetComponentInParent<Transform>().gameObject.GetComponentInParent<TeacherScript>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -42,6 +44,7 @@ public class TeacherVision : MonoBehaviour
                                 //Debug.Log("Player detected");
                                 teacherScript.target = player;
                                 teacherScript.ToggleChasing();
+                                sr.enabled = false;
                             }
                         }
                     }

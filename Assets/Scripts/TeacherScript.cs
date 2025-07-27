@@ -33,7 +33,7 @@ public class TeacherScript : MonoBehaviour
     private bool isMoving = false;
 
     public float waitTime = 0.0f;
-    private float defaultWaitTime = 1.0f;
+    public float defaultWaitTime = 1.0f;
 
     private Animator animator;
     private Vector2 lastDirection = Vector2.zero;
@@ -54,7 +54,7 @@ public class TeacherScript : MonoBehaviour
             Debug.LogError("Animator component not found on TeacherScript.");
         }
         animator.Play(startAnimation);
-        visionCone = transform.GetChild(0);
+        visionCone = transform.FindChild("Vision");
         nextDest = transform.position;
 
         if (isPatrolling && patrolWaypoints.Length > 0 && currentPatrolWaypointIndex < patrolWaypoints.Length)
