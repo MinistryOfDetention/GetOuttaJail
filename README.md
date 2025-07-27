@@ -3,4 +3,4 @@
 The theme of the game jam was "Simulacrum".
 
 ## About this game
-Test your new found ability to simulate your annoying teachers. Using the mask of Loki, stealthily navigate trough the your school to escape detention while using the simulation ability of the mask.
+Test your new-found ability to simulate your annoying teachers. Using the Mask of Loki, stealthily navigate through your school to escape detention while using it's simulation ability.
