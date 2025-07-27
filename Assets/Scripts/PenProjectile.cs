@@ -27,11 +27,16 @@ public class PenProjectile : MonoBehaviour
     }
     void Update()
     {
-        
-        
+
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
+    {
+        drop();
+    }
+
+    public void drop()
     {
         Destroy(gameObject);
         itemDrop.transform.position = transform.position + (transform.up * -bounceBack);
