@@ -43,6 +43,10 @@ public class DisguiseUnlock : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
+            if (isFirstMask)
+            {
+                LevelMaster.tutorialDialogueStarted = true;
+            }
             Disguise disguise = other.gameObject.GetComponent<Disguise>();
             LevelMaster.numberOfUnlockedDisguises++;
             Destroy(gameObject);
