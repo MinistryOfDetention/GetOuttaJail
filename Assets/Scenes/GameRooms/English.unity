@@ -782,87 +782,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1116cd3a26952749bd6d5a42d6261c0, type: 3}
---- !u!1001 &754984579
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 450701861863634916, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: m_Name
-      value: Female Teacher
-      objectReference: {fileID: 0}
-    - target: {fileID: 1715753266785009102, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.2192426
-      objectReference: {fileID: 0}
-    - target: {fileID: 1715753266785009102, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.2690423
-      objectReference: {fileID: 0}
-    - target: {fileID: 1715753266785009102, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1715753266785009102, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1715753266785009102, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1715753266785009102, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1715753266785009102, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1715753266785009102, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1715753266785009102, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1715753266785009102, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3053554144868998197, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: tilemap
-      value: 
-      objectReference: {fileID: 1671827052}
-    - target: {fileID: 3053554144868998197, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: patrolWaypoints.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3053554144868998197, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: patrolWaypoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 1756855334}
-    - target: {fileID: 3053554144868998197, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: patrolWaypoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 1549296970}
-    - target: {fileID: 3053554144868998197, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: patrolWaypoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 943742245}
-    - target: {fileID: 5202607504160097919, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 228fc6e58c862b34ab86b6a08532748a, type: 3}
 --- !u!1001 &778198531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5401,6 +5320,83 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1748808628
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 450701861863634916, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: m_Name
+      value: Female Teacher
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.01721
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8000759
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3053554144868998197, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: tilemap
+      value: 
+      objectReference: {fileID: 1671827052}
+    - target: {fileID: 3053554144868998197, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: patrolWaypoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3053554144868998197, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: patrolWaypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1756855334}
+    - target: {fileID: 3053554144868998197, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: patrolWaypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1549296970}
+    - target: {fileID: 3053554144868998197, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
+      propertyPath: patrolWaypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 943742245}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0607d03f430578b46bef73ac0f5bec6e, type: 3}
 --- !u!4 &1756855334 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5260356908257568432, guid: 8a3bdec4a44ec4e258a26d4db990ac17, type: 3}
@@ -6062,6 +6058,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1526819700}
     m_Modifications:
+    - target: {fileID: 1390467594712679395, guid: 56883bdf992897d40881bfd5bd3e9332, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4420633064422206994, guid: 56883bdf992897d40881bfd5bd3e9332, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.57
@@ -6295,7 +6295,6 @@ SceneRoots:
   - {fileID: 752272401}
   - {fileID: 648055770}
   - {fileID: 518198045}
-  - {fileID: 754984579}
   - {fileID: 1012352310}
   - {fileID: 93731246}
   - {fileID: 943742244}
@@ -6313,3 +6312,4 @@ SceneRoots:
   - {fileID: 5392996429332526259}
   - {fileID: 1492119712}
   - {fileID: 1803218158}
+  - {fileID: 1748808628}
