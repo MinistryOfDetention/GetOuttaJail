@@ -12,11 +12,14 @@ public class PenProjectile : MonoBehaviour
     public GameObject itemDrop;
 
     private float bounceBack = 0.5f; // The degree to which an item drop will spawn away from the collision.
+    public AudioClip penDropSound;
+    public AudioClip penShotSound;
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        AudioManager.Instance.PlaySFX(penShotSound);
     }
 
     // Update is called once per frame
@@ -32,12 +35,13 @@ public class PenProjectile : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    {
+    {   
         drop();
     }
 
     public void drop()
-    {
+    {   
+        AudioManager.Instance.PlaySFX(penDropSound);
         Destroy(gameObject);
         itemDrop.transform.position = transform.position + (transform.up * -bounceBack);
         itemDrop.SetActive(true);

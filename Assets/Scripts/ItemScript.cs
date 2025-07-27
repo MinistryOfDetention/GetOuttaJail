@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemScript : MonoBehaviour
-{
+{   
+    public AudioClip pickUpSound; // The item to drop when the player collides with this object.
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,10 @@ public class ItemScript : MonoBehaviour
             if (inventory != null)
             {
                 //Debug.Log("Item collision detected with: " + other.gameObject.name);
+                if (pickUpSound != null)
+                {
+                    AudioManager.Instance.PlaySFX(pickUpSound);
+                }
                 inventory.AddItem(gameObject);
                 gameObject.SetActive(false);
             }
