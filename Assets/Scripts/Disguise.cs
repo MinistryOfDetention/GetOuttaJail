@@ -6,8 +6,7 @@ public class Disguise : MonoBehaviour
 {
 
     // List of unlocked disguises
-    public string[] unlockedDisguises = new string[] { "None", "Cleaner", "Teacher" };
-
+    public string[] unlockedDisguises = new string[] { "None", "Square", "Circle", "Triangle", "Egg" };
     public Sprite[] disguiseSprites;
     public SpriteRenderer disguiseRenderer;
 
@@ -30,12 +29,12 @@ public class Disguise : MonoBehaviour
     {
         currentDisguise++;
 
-        if (currentDisguise >= unlockedDisguises.Length)
+        if (currentDisguise > LevelMaster.numberOfUnlockedDisguises)
         {
             currentDisguise = 0;
         }
 
-        if (currentDisguise < disguiseSprites.Length)
+        if (currentDisguise <= LevelMaster.numberOfUnlockedDisguises)
         {
             disguiseRenderer.sprite = disguiseSprites[currentDisguise];
         }
