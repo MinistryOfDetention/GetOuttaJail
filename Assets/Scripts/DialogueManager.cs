@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class DialogueManager : MonoBehaviour
@@ -63,7 +64,7 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        
+
     }
 
     IEnumerator Type()
@@ -136,6 +137,12 @@ public class DialogueManager : MonoBehaviour
         if (LevelMaster.playerInDialogue)
         {
             LevelMaster.playerInDialogue = false;
+        }
+
+        if (LevelMaster.inEndgameDialogue)
+        {
+            SceneManager.LoadScene(0);
+            LevelMaster.inEndgameDialogue = false;
         }
     }
 

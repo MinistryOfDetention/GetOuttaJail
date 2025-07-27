@@ -13,6 +13,8 @@ public class LevelMaster : MonoBehaviour
 
     static bool controlsTutorialStarted = false;
 
+    public static bool inEndgameDialogue = false;
+
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -27,7 +29,7 @@ public class LevelMaster : MonoBehaviour
         {
             dm.AddDialogue(new string[] {
                 "Ah, I can press SPACEBAR to disguise myself as a teacher.",
-                "Time to get out of this crusty school!"
+                "Time to get out of this crusty old school!"
             });
         }
     }

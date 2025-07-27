@@ -7,6 +7,8 @@ public class LockedDoorCollision : MonoBehaviour
 {
     public DialogueManager dm;
 
+    public bool isEndgame = false;
+
     private void Start()
     {
         dm = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>();
@@ -16,14 +18,24 @@ public class LockedDoorCollision : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Trigger locked door dialogue.
-            //Debug.Log("Door is locked...");
-            dm.AddDialogue(new string[] {
+            if (!isEndgame)
+            {
+                // Trigger locked door dialogue.
+                //Debug.Log("Door is locked...");
+                dm.AddDialogue(new string[] {
                 "Hmm... the door's locked.",
                 "I'll need a key for this door.",
                 "Maybe the principal will have the key..."
             });
-            LevelMaster.playerInDialogue = true;
+                LevelMaster.playerInDialogue = true;
+            }
+            else
+            {
+                dm.AddDialogue(new string[] {
+                    "The key worked! I'm free!!"
+                });
+                LevelMaster.inEndgameDialogue = true;
+            }
         }
     }
 }
