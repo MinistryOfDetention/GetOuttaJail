@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
+using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class PlayerCollisionMovement : MonoBehaviour
 {
@@ -14,7 +17,9 @@ public class PlayerCollisionMovement : MonoBehaviour
     private float previousVertical;
 
     private Animator bodyAnimator;
-
+    public CharacterAudio characterAudio;
+    public bool walkingTimerActive = false;
+    public float footStepInterval = 0.4f;
 
     void Awake()
     {
@@ -75,7 +80,7 @@ public class PlayerCollisionMovement : MonoBehaviour
         }
 
         HandleAnimations();
-
+        HandleFootstepAudio();
 
         previousHorizontal = horizontal;
         previousVertical = vertical;
@@ -119,6 +124,28 @@ public class PlayerCollisionMovement : MonoBehaviour
         {
             // Idle state, you can set an idle animation if needed
             bodyAnimator.Play("PlayerIdle");
+        }
+    }
+    private void HandleFootstepAudio()
+    {
+        if (movement == Vector2.zero || walkingTimerActive)
+        {
+            return;
+        }
+        else
+        {
+            StartCoroutine(FootstepTimer(footStepInterval));
+        }
+    }
+
+    IEnumerator FootstepTimer(float time)
+    {   
+        walkingTimerActive = true;
+        yield return new WaitForSeconds(time);
+        walkingTimerActive = false;
+        if (movement != Vector2.zero)
+        {
+            characterAudio.PlayClip("footsteps");
         }
     }
 }
