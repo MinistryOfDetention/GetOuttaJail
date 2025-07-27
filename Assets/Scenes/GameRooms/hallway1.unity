@@ -2760,6 +2760,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

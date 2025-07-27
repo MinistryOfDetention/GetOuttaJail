@@ -63,6 +63,7 @@ MonoBehaviour:
   characterAudio: {fileID: 3444832758985999646}
   walkingTimerActive: 0
   footStepInterval: 0.35
+  startAnimation: TeacherIdleDown
 --- !u!61 &5202607504160097919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -660,7 +661,7 @@ Animator:
   m_GameObject: {fileID: 7519249275503715756}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a7c3bdb8f76d54368a7ddcbdbd19056f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 340a8487af2814fce8b4a7c6250ea5c7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
