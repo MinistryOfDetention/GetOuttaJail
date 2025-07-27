@@ -13,6 +13,8 @@ public class Disguise : MonoBehaviour
 
     public int currentDisguise = 0;
 
+    public CharacterAudio characterAudio;
+
     void Start()
     {
         Debug.Log(unlockedDisguises);
@@ -23,6 +25,7 @@ public class Disguise : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             SwitchDisguise();
+            characterAudio.PlayClip("maskSwap");
         }
     }
 
