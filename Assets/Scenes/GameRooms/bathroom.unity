@@ -3069,6 +3069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Disguise Unlock
       objectReference: {fileID: 0}
+    - target: {fileID: 4740694902240305517, guid: 92324ab664d342943bbff5ac9bae7ac6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 312652941, guid: 0a89b14ffd6064e0e97496f560c47272, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
