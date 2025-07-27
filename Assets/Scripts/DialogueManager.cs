@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class DialogueManager : MonoBehaviour
@@ -63,7 +64,7 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        
+
     }
 
     IEnumerator Type()
@@ -132,6 +133,17 @@ public class DialogueManager : MonoBehaviour
         }
 
         dialogueEnd = true;
+
+        if (LevelMaster.playerInDialogue)
+        {
+            LevelMaster.playerInDialogue = false;
+        }
+
+        if (LevelMaster.inEndgameDialogue)
+        {
+            SceneManager.LoadScene(0);
+            LevelMaster.inEndgameDialogue = false;
+        }
     }
 
     public void AddDialogue(string[] sentences, bool startedFlag = false)
@@ -142,5 +154,7 @@ public class DialogueManager : MonoBehaviour
         initialWaitTime = 1f;
         startedFlag = true;
         dialogueEnd = false;
+
+        LevelMaster.playerInDialogue = true;
     }
 }
