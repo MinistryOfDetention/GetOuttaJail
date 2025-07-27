@@ -63,6 +63,7 @@ MonoBehaviour:
   characterAudio: {fileID: 3444832758985999646}
   walkingTimerActive: 0
   footStepInterval: 0.35
+  startAnimation: TeacherIdleDown
 --- !u!61 &5202607504160097919
 BoxCollider2D:
   m_ObjectHideFlags: 0
