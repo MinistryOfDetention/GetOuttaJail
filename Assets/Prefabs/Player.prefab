@@ -182,7 +182,7 @@ SortingGroup:
   m_GameObject: {fileID: 2719270405913662522}
   m_Enabled: 1
   m_SortingLayerID: 1011218695
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_SortAtRoot: 0
 --- !u!114 &1398827482336595541
@@ -643,12 +643,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  penBulletPrefab: {fileID: 2857815606832727088, guid: 664206b1f0bc74ee5a6ed477cb5a781d, type: 3}
+  dm: {fileID: 0}
   characterAudio: {fileID: 7738997494244262994}
   walkingTimerActive: 0
   footStepInterval: 0.4
-  penBulletPrefab: {fileID: 2857815606832727088, guid: 664206b1f0bc74ee5a6ed477cb5a781d, type: 3}
-  penBulletPrefab: {fileID: 0}
-  dm: {fileID: 0}
 --- !u!114 &4220951761077271045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,9 +717,9 @@ MonoBehaviour:
   disguiseSprites:
   - {fileID: 0}
   - {fileID: 312652941, guid: 0a89b14ffd6064e0e97496f560c47272, type: 3}
-  - {fileID: -1159760132, guid: 0a89b14ffd6064e0e97496f560c47272, type: 3}
-  - {fileID: -2022446341, guid: 0a89b14ffd6064e0e97496f560c47272, type: 3}
   - {fileID: 587626737, guid: 0a89b14ffd6064e0e97496f560c47272, type: 3}
+  - {fileID: -2022446341, guid: 0a89b14ffd6064e0e97496f560c47272, type: 3}
+  - {fileID: -1159760132, guid: 0a89b14ffd6064e0e97496f560c47272, type: 3}
   disguiseRenderer: {fileID: 7800467571247907311}
   currentDisguise: 0
   characterAudio: {fileID: 7738997494244262994}
