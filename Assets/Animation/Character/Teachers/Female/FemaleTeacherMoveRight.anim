@@ -105,15 +105,6 @@ AnimationClip:
     classID: 212
     script: {fileID: 0}
     flags: 2
-  - serializedVersion: 2
-    curve:
-    - time: 0
-      value: {fileID: 180127285, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
-    attribute: m_Sprite
-    path: HeadSprite
-    classID: 212
-    script: {fileID: 0}
-    flags: 2
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -148,15 +139,6 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
-    - serializedVersion: 2
-      path: 2564294673
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
-      isIntCurve: 0
-      isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: -871322144, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
     - {fileID: 366997168, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
@@ -168,7 +150,6 @@ AnimationClip:
     - {fileID: 1542729578, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
     - {fileID: 492073951, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
     - {fileID: -871322144, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
-    - {fileID: 180127285, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -253,4 +234,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: SetFacingRight
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.1166667
+    functionName: SetFacingRight
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

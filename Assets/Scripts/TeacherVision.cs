@@ -6,6 +6,8 @@ public class TeacherVision : MonoBehaviour
 {
     public GameObject player;
     public TeacherScript teacherScript;
+
+    // 0 = Circle, 1 = Square, 2 = Triangle
     public int[] canSeeThroughDisguises = new int[] { 0 };
 
     // Start is called before the first frame update
