@@ -52,7 +52,7 @@ public class TeacherScript : MonoBehaviour
         visionCone = transform.GetChild(0);
         nextDest = transform.position;
 
-        if (isPatrolling && currentPatrolWaypointIndex < patrolWaypoints.Length)
+        if (isPatrolling && patrolWaypoints.Length > 0 && currentPatrolWaypointIndex < patrolWaypoints.Length)
         {
             target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
         }
@@ -214,7 +214,7 @@ public class TeacherScript : MonoBehaviour
                         target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
                     }
                 }
-                else
+                else if (target)
                 {
                     float distanceToTarget = Vector3.Magnitude(target.transform.position - transform.position);
                     if (isPatrolling && distanceToTarget < 1.0f)
@@ -257,16 +257,16 @@ public class TeacherScript : MonoBehaviour
     {
         float timer = stunTime;
 
-            if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
-            {
-                var nextHop = Astar();
-                nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
-                isMoving = false;
-            }
-            else
-            {
-                isMoving = true;
-            }
+        if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
+        {
+            var nextHop = Astar();
+            nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
+            isMoving = false;
+        }
+        else
+        {
+            isMoving = true;
+        }
 
         while (timer > 0)
         {
@@ -284,7 +284,7 @@ public class TeacherScript : MonoBehaviour
         {
             StopCoroutine(StunCoroutine);
         }
-        
+
         if (isMoving && !walkingTimerActive)
         {
             HandleFootstepAudio();
@@ -323,7 +323,7 @@ public class TeacherScript : MonoBehaviour
     }
 
     public void ToggleChasing()
-    {   
+    {
         if (isChasing)
         {
             return; // Already chasing, no need to toggle again
@@ -378,7 +378,7 @@ public class TeacherScript : MonoBehaviour
 
     public void HandleFootstepAudio()
     {
-        if (!walkingTimerActive )
+        if (!walkingTimerActive)
         {
             StartCoroutine(FootstepCooldown());
         }
