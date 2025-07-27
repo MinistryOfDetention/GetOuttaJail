@@ -13,6 +13,8 @@ public class LevelMaster : MonoBehaviour
 
     static bool controlsTutorialStarted = false;
 
+    public static bool penTutorialStarted = false;
+
     public static bool inEndgameDialogue = false;
 
     void Start()

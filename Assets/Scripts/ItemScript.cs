@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class ItemScript : MonoBehaviour
 {   
+    public DialogueManager dm;
+
     public AudioClip pickUpSound; // The item to drop when the player collides with this object.
     // Start is called before the first frame update
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        dm = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -31,6 +27,16 @@ public class ItemScript : MonoBehaviour
                 }
                 inventory.AddItem(gameObject);
                 gameObject.SetActive(false);
+
+                if (!LevelMaster.penTutorialStarted)
+                {
+                    dm.AddDialogue(new string[] {
+                        "A pen? I can use the SHIFT key to launch it at teachers!",
+                        "I'll need to drop the pen when I'm entering a new room though..."
+                    });
+                    LevelMaster.penTutorialStarted = true;
+                }
+
             }
         }
         else
