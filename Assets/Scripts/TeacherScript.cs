@@ -27,7 +27,7 @@ public class TeacherScript : MonoBehaviour
     private UnityEngine.AI.NavMeshAgent agent;
     private Vector3 nextDest;
     private bool playerDetected = false;
-
+    //test
     private bool isPatrolling = true;
     private bool isChasing = false;
     private bool isMoving = false;
