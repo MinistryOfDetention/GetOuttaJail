@@ -60,6 +60,7 @@ MonoBehaviour:
   speed: 3
   stunIconPrefab: {fileID: 282536350348174471, guid: 4c95a0295835c4816a2e42b0ac8502f3, type: 3}
   waitTime: 0
+  defaultWaitTime: 1
   characterAudio: {fileID: 3444832758985999646}
   walkingTimerActive: 0
   footStepInterval: 0.35
@@ -153,7 +154,6 @@ GameObject:
   - component: {fileID: 6603063201308324264}
   - component: {fileID: 5383693587985610480}
   - component: {fileID: 1955713757569636159}
-  - component: {fileID: 3882884901871163777}
   m_Layer: 0
   m_Name: Vision Circle
   m_TagString: Untagged
@@ -230,8 +230,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1011218695
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: 403fe789b797605489f5fe69dbd3047b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 0.61960787}
   m_FlipX: 0
@@ -278,18 +278,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!210 &3882884901871163777
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2156317718500099894}
-  m_Enabled: 1
-  m_SortingLayerID: 1011218695
-  m_SortingLayer: 2
-  m_SortingOrder: 1
-  m_SortAtRoot: 0
 --- !u!1 &2661001924245350880
 GameObject:
   m_ObjectHideFlags: 0
