@@ -132,6 +132,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         dialogueEnd = true;
+
+        if (LevelMaster.playerInDialogue)
+        {
+            LevelMaster.playerInDialogue = false;
+        }
     }
 
     public void AddDialogue(string[] sentences, bool startedFlag = false)
@@ -142,5 +147,7 @@ public class DialogueManager : MonoBehaviour
         initialWaitTime = 1f;
         startedFlag = true;
         dialogueEnd = false;
+
+        LevelMaster.playerInDialogue = true;
     }
 }

@@ -7,6 +7,8 @@ public class LevelMaster : MonoBehaviour
 
     public static int numberOfUnlockedDisguises = 0;
 
+    public static bool playerInDialogue = false;
+
     static bool tutorialDialogueStarted = false;
 
     static bool controlsTutorialStarted = false;
