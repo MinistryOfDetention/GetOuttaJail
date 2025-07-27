@@ -43,6 +43,7 @@ public class TeacherScript : MonoBehaviour
     public bool walkingTimerActive = false;
     public float footStepInterval = 0.45f;
     private Boolean Stunned = false;
+    public string startAnimation = "TeacherIdleDown";
 
     void Start()
     {
@@ -52,6 +53,7 @@ public class TeacherScript : MonoBehaviour
         {
             Debug.LogError("Animator component not found on TeacherScript.");
         }
+        animator.Play(startAnimation);
         visionCone = transform.GetChild(0);
         nextDest = transform.position;
 
