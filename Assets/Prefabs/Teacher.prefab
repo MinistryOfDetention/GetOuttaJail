@@ -56,6 +56,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   currentPatrolWaypointIndex: 0
+  stunTime: 5
   speed: 3
   waitTime: 0
   characterAudio: {fileID: 3444832758985999646}
@@ -68,7 +69,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450701861863634916}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

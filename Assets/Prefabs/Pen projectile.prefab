@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2068239908066909448}
   m_Layer: 0
   m_Name: Pen projectile
-  m_TagString: Untagged
+  m_TagString: pen projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.8
-  itemPrefab: {fileID: 417463587097914924, guid: 9ae4cf41f5b534e48b9a174e4f1bb774, type: 3}
+  itemDrop: {fileID: 0}
 --- !u!1839735485 &-479254075737085862
 Tilemap:
   m_ObjectHideFlags: 0

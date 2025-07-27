@@ -17,6 +17,8 @@ public class TeacherScript : MonoBehaviour
     public Transform[] patrolWaypoints;
     public int currentPatrolWaypointIndex = 0;
 
+    public float stunTime;
+
     public float speed;
     private float startingSpeed;
     private UnityEngine.AI.NavMeshAgent agent;
@@ -37,6 +39,7 @@ public class TeacherScript : MonoBehaviour
     public CharacterAudio characterAudio;
     public bool walkingTimerActive = false;
     public float footStepInterval = 0.45f;
+    private Boolean Stunned = false;
 
     void Start()
     {
@@ -193,39 +196,66 @@ public class TeacherScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPatrolling)
+        if (!Stunned)
         {
-            if (waitTime > 0)
+            if (isPatrolling)
             {
-                waitTime -= Time.deltaTime;
-                if (waitTime <= 0)
+                if (waitTime > 0)
                 {
-                    currentPatrolWaypointIndex++;
-                    if (currentPatrolWaypointIndex >= patrolWaypoints.Length)
+                    waitTime -= Time.deltaTime;
+                    if (waitTime <= 0)
                     {
-                        currentPatrolWaypointIndex = 0;
-                    }
+                        currentPatrolWaypointIndex++;
+                        if (currentPatrolWaypointIndex >= patrolWaypoints.Length)
+                        {
+                            currentPatrolWaypointIndex = 0;
+                        }
 
-                    target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
+                        target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
+                    }
+                }
+                else
+                {
+                    float distanceToTarget = Vector3.Magnitude(target.transform.position - transform.position);
+                    if (isPatrolling && distanceToTarget < 1.0f)
+                    {
+                        waitTime = defaultWaitTime;
+                    }
                 }
             }
-            else
+
+
+            if (target)
             {
-                float distanceToTarget = Vector3.Magnitude(target.transform.position - transform.position);
-                if (isPatrolling && distanceToTarget < 1.0f)
+                // Face the target (either the player or patrol waypoint)
+                Vector2 targ = new Vector2(target.transform.position.x - transform.position.x, target.transform.position.y - transform.position.y);
+                float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg - 90f;
+                visionCone.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+                if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
                 {
-                    waitTime = defaultWaitTime;
+                    var nextHop = Astar();
+                    nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
                 }
+
+                // Move towards the next destination
+                Vector2 direction = (nextDest - transform.position).normalized;
+                HandleAnimation(direction);
+                transform.position = Vector3.MoveTowards(transform.position, nextDest, speed * Time.deltaTime);
             }
         }
-
-
-        if (target)
+        else
         {
-            // Face the target (either the player or patrol waypoint)
-            Vector2 targ = new Vector2(target.transform.position.x - transform.position.x, target.transform.position.y - transform.position.y);
-            float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg - 90f;
-            visionCone.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            // if stunned
+            animator.Play("TeacherIdleDown");
+        }
+    }
+
+
+    private IEnumerator StunCoroutine;
+    private IEnumerator StunIEnumerator()
+    {
+        float timer = stunTime;
 
             if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
             {
@@ -238,23 +268,45 @@ public class TeacherScript : MonoBehaviour
                 isMoving = true;
             }
 
-            // Move towards the next destination
-            Vector2 direction = (nextDest - transform.position).normalized;
-            HandleAnimation(direction);
-            transform.position = Vector3.MoveTowards(transform.position, nextDest, speed * Time.deltaTime);
+        while (timer > 0)
+        {
+            yield return null;
+            timer -= Time.deltaTime;
+        }
+
+        Stunned = false;
+    }
+    void Stun()
+    {
+        // Activates the stun phase of the teacher.
+        Stunned = true;
+        if (StunCoroutine != null)
+        {
+            StopCoroutine(StunCoroutine);
         }
         
         if (isMoving && !walkingTimerActive)
         {
             HandleFootstepAudio();
         }
+
+        StunCoroutine = StunIEnumerator();
+
+        StartCoroutine(StunCoroutine);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            // If teacher collides with player then reload the scene.
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if (other.CompareTag("pen projectile"))
+        {
+            // Activate teacher stun timer.
+            other.GetComponent<PenProjectile>().drop();
+            Stun();
         }
     }
 
