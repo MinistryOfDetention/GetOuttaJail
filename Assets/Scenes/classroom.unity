@@ -3560,6 +3560,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5355080282545063215, guid: 4c95a0295835c4816a2e42b0ac8502f3, type: 3}
     - target: {fileID: 3053554144868998197, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: stunIconPrefab
+      value: 
+      objectReference: {fileID: 5355080282545063215, guid: 4c95a0295835c4816a2e42b0ac8502f3, type: 3}
+    - target: {fileID: 3053554144868998197, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: patrolWaypoints.Array.data[0]
       value: 
       objectReference: {fileID: 2120869920}
