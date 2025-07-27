@@ -20,6 +20,9 @@ public class TeacherScript : MonoBehaviour
     public float stunTime;
 
     public float speed;
+
+    public GameObject stunIconPrefab;
+    private GameObject stunIcon;
     private float startingSpeed;
     private UnityEngine.AI.NavMeshAgent agent;
     private Vector3 nextDest;
@@ -56,6 +59,7 @@ public class TeacherScript : MonoBehaviour
         {
             target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
         }
+
     }
 
     class Node
@@ -275,20 +279,31 @@ public class TeacherScript : MonoBehaviour
         }
 
         Stunned = false;
+        Destroy(stunIcon);
     }
     void Stun()
     {
         // Activates the stun phase of the teacher.
         Stunned = true;
+
         if (StunCoroutine != null)
         {
             StopCoroutine(StunCoroutine);
+            Destroy(stunIcon);
+        }
+
+        stunIcon = Instantiate(stunIconPrefab, transform.position + Vector3.up * 2.5f, Quaternion.identity);
+        if (isMoving && !walkingTimerActive)
+        {
+            HandleFootstepAudio();
         }
 
         if (isMoving && !walkingTimerActive)
         {
             HandleFootstepAudio();
         }
+
+        stunIcon = Instantiate(stunIconPrefab, transform.position + Vector3.up * 2.5f, Quaternion.identity);
 
         StunCoroutine = StunIEnumerator();
 
