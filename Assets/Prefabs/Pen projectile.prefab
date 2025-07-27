@@ -50,6 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6.79
   itemDrop: {fileID: 0}
+  penDropSound: {fileID: 8300000, guid: 493c06029c33a4b8392ea5e656529548, type: 3}
+  penShotSound: {fileID: 8300000, guid: 6f59ea2665d9b4ca991c52d793d2191b, type: 3}
 --- !u!1839735485 &-479254075737085862
 Tilemap:
   m_ObjectHideFlags: 0
@@ -230,8 +232,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1011218695
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 387583458, guid: 0a89b14ffd6064e0e97496f560c47272, type: 3}
   m_Color: {r: 1, g: 0.9831489, b: 0, a: 1}
