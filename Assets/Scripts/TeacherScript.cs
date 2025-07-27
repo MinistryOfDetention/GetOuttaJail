@@ -60,6 +60,7 @@ public class TeacherScript : MonoBehaviour
             target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
         }
 
+
     }
 
     class Node
@@ -280,11 +281,13 @@ public class TeacherScript : MonoBehaviour
 
         Stunned = false;
         Destroy(stunIcon);
+        Destroy(stunIcon);
     }
     void Stun()
     {
         // Activates the stun phase of the teacher.
         Stunned = true;
+
 
         if (StunCoroutine != null)
         {
@@ -298,6 +301,7 @@ public class TeacherScript : MonoBehaviour
             HandleFootstepAudio();
         }
 
+        stunIcon = Instantiate(stunIconPrefab, transform.position + Vector3.up * 2.5f, Quaternion.identity);
         if (isMoving && !walkingTimerActive)
         {
             HandleFootstepAudio();

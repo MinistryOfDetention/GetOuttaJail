@@ -58,6 +58,7 @@ MonoBehaviour:
   currentPatrolWaypointIndex: 0
   stunTime: 5
   speed: 3
+  stunIconPrefab: {fileID: 282536350348174471, guid: 4c95a0295835c4816a2e42b0ac8502f3, type: 3}
   waitTime: 0
   characterAudio: {fileID: 3444832758985999646}
   walkingTimerActive: 0
@@ -248,7 +249,7 @@ Transform:
   m_GameObject: {fileID: 2661001924245350880}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.81, z: 0}
+  m_LocalPosition: {x: 0, y: 0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
