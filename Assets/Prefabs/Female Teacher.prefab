@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 5739952465001082560}
   - component: {fileID: 8975460256505494099}
   - component: {fileID: 1207874158577984915}
+  - component: {fileID: 6899467685771836671}
   m_Layer: 0
   m_Name: Vision Circle
   m_TagString: Untagged
@@ -354,6 +355,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!210 &6899467685771836671
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597874347715910891}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1 &7223323252355803773
 GameObject:
   m_ObjectHideFlags: 0

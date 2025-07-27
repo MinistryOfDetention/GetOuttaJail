@@ -4,10 +4,29 @@ using UnityEngine;
 
 public class LevelMaster : MonoBehaviour
 {
+
     public static int numberOfUnlockedDisguises = 0;
+
+    static bool tutorialDialogueStarted = false;
+
+    static bool controlsTutorialStarted = false;
 
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         LevelMaster.numberOfUnlockedDisguises = 0;
+    }
+
+    public static void ShowControls()
+    {
+        DialogueManager dm = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>();
+
+        if (dm)
+        {
+            dm.AddDialogue(new string[] {
+                "Ah, I can press SPACEBAR to disguise myself as a teacher.",
+                "Time to get out of this crusty school!"
+            });
+        }
     }
 }

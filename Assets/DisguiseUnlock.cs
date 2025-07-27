@@ -16,6 +16,11 @@ public class DisguiseUnlock : MonoBehaviour
             Disguise disguise = other.gameObject.GetComponent<Disguise>();
             LevelMaster.numberOfUnlockedDisguises++;
             Destroy(gameObject);
+
+            if (LevelMaster.numberOfUnlockedDisguises == 1)
+            {
+                LevelMaster.ShowControls();
+            }
         }
     }
 

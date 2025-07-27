@@ -8,6 +8,7 @@ public class PlayerCollisionMovement : MonoBehaviour
 {
     public float moveSpeed = 5;
     public GameObject penBulletPrefab;
+    public DialogueManager dm;
     private Rigidbody2D rb;
     private Vector2 movement;
     private float previousHorizontal;
@@ -28,13 +29,23 @@ public class PlayerCollisionMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        dm = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>();
     }
 
     void Update()
     {
+        HandleAnimations();
+
+        // Stop controls if dialogue is happening
+        if (dm && !dm.dialogueEnd)
+        {
+            movement = Vector2.zero;
+            return;
+        }
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-
 
         bool horizontalChanged = horizontal != previousHorizontal;
         bool verticalChanged = vertical != previousVertical;
@@ -73,9 +84,6 @@ public class PlayerCollisionMovement : MonoBehaviour
         {
             movement = Vector2.zero;
         }
-
-        HandleAnimations();
-
 
         previousHorizontal = horizontal;
         previousVertical = vertical;

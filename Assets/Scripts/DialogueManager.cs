@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour
         // textDisplay.alignment = TextAlignmentOptions.Midline;
         speakerIndex = 0;
         // textDisplay.rectTransform.position = Camera.main.WorldToScreenPoint(speakers[speakerIndex].position + new Vector3(0, 1, 0));
-        
+
         currentSpeaker = speakers[speakerIndex].transform.GetChild(1).gameObject;
     }
 
@@ -51,8 +51,8 @@ public class DialogueManager : MonoBehaviour
                 StartCoroutine(Type());
             }
         }
-        
-        if (initialWaitTime <= 0 && sentenceWaitTime > 0) 
+
+        if (initialWaitTime <= 0 && sentenceWaitTime > 0)
         {
             sentenceWaitTime -= Time.deltaTime;
 
@@ -62,6 +62,8 @@ public class DialogueManager : MonoBehaviour
                 NextSentence();
             }
         }
+
+        
     }
 
     IEnumerator Type()
@@ -72,7 +74,7 @@ public class DialogueManager : MonoBehaviour
             string currentDialogueText = currentSpeaker.GetComponent<Dialogue>().GetDialogue();
             currentDialogueText += letter;
             currentSpeaker.GetComponent<Dialogue>().ModifyDialogue(currentDialogueText);
-            
+
             if (dialogueEnd == true)
             {
                 EndDialogue();
@@ -82,7 +84,7 @@ public class DialogueManager : MonoBehaviour
             {
                 yield return new WaitForSeconds(0.02f);
             }
-            
+
         }
 
         sentenceWaitTime = defaultSentenceWaitTime;
@@ -130,5 +132,15 @@ public class DialogueManager : MonoBehaviour
         }
 
         dialogueEnd = true;
+    }
+
+    public void AddDialogue(string[] sentences, bool startedFlag = false)
+    {
+        this.sentences = sentences;
+        index = 0;
+        speakerIndex = 0;
+        initialWaitTime = 1f;
+        startedFlag = true;
+        dialogueEnd = false;
     }
 }
