@@ -45,6 +45,9 @@ TagManager:
   - name: collidable
     uniqueID: 1770932505
     locked: 0
+  - name: coverup
+    uniqueID: 3970813491
+    locked: 0
   - name: overlay
     uniqueID: 1011218695
     locked: 0

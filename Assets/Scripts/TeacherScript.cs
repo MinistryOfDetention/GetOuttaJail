@@ -32,16 +32,16 @@ public class TeacherScript : MonoBehaviour
     private Vector2 lastDirection = Vector2.zero;
 
     void Start()
-    {   
+    {
         animator = GetComponentInChildren<Animator>();
         if (animator == null)
         {
             Debug.LogError("Animator component not found on TeacherScript.");
-        } 
+        }
         visionCone = transform.GetChild(0);
         nextDest = transform.position;
 
-        if (isPatrolling && currentPatrolWaypointIndex < patrolWaypoints.Length)
+        if (isPatrolling && patrolWaypoints.Length > 0 && currentPatrolWaypointIndex < patrolWaypoints.Length)
         {
             target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
         }
@@ -201,7 +201,7 @@ public class TeacherScript : MonoBehaviour
                     target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
                 }
             }
-            else
+            else if (target)
             {
                 float distanceToTarget = Vector3.Magnitude(target.transform.position - transform.position);
                 if (isPatrolling && distanceToTarget < 1.0f)
