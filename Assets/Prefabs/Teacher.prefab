@@ -31,6 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 227880184212590093}
   - {fileID: 8182647665917001198}
   - {fileID: 1613177259899843982}
   - {fileID: 1598766134243082384}
@@ -55,8 +56,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   currentPatrolWaypointIndex: 0
+  stunTime: 5
   speed: 3
+  stunIconPrefab: {fileID: 282536350348174471, guid: 4c95a0295835c4816a2e42b0ac8502f3, type: 3}
   waitTime: 0
+  characterAudio: {fileID: 3444832758985999646}
+  walkingTimerActive: 0
+  footStepInterval: 0.35
+  startAnimation: TeacherIdleDown
 --- !u!61 &5202607504160097919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -309,7 +316,7 @@ Transform:
   m_GameObject: {fileID: 2661001924245350880}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.81, z: 0}
+  m_LocalPosition: {x: 0, y: 0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -353,8 +360,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1770932505
-  m_SortingLayer: 1
+  m_SortingLayerID: -324153805
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -1453912087, guid: 5a2c4cfc2018442d997eaaa0a82dd119, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -367,6 +374,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5945112232446777347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 227880184212590093}
+  - component: {fileID: 3444832758985999646}
+  m_Layer: 0
+  m_Name: PlayerAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &227880184212590093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945112232446777347}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5777607, y: -1.7483377, z: -0.029971963}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1715753266785009102}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3444832758985999646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945112232446777347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add69a68447244c7c8ee91136d5d3ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footsteps:
+  - {fileID: 8300000, guid: 77467051cf9d44aedb51c14455753476, type: 3}
+  - {fileID: 8300000, guid: 5b26d7b50872647bca60026e6e5c0f54, type: 3}
+  - {fileID: 8300000, guid: f639ed191e7cc4a4cbf3060c7d7a1c44, type: 3}
+  - {fileID: 8300000, guid: b66797ce52cb642038b5beac0e92ff57, type: 3}
+  - {fileID: 8300000, guid: eff8e9dd5ae864df695b30431c163c7e, type: 3}
+  maskUnlockSound: {fileID: 8300000, guid: 0a721dd5a57e949a99a0c3bb7b464d96, type: 3}
+  maskSwapSounds:
+  - {fileID: 8300000, guid: bf1a342231cb4417d854f8357bebebce, type: 3}
+  - {fileID: 8300000, guid: 0c51dbbfc786546c28ed80acc7d17b5c, type: 3}
+  - {fileID: 8300000, guid: 7c7c781b64b1340bcaa5890b90c37fc7, type: 3}
+  - {fileID: 8300000, guid: c4dc871051d504e7099b8d4bbb71863c, type: 3}
+  doorOpenSound: {fileID: 8300000, guid: bc4acbb9138e94c17bcbbb66ee3ede47, type: 3}
+  detectionSound: {fileID: 8300000, guid: eb11b4d0b4b7e40f0b08140e1a446ccb, type: 3}
 --- !u!1 &7223323252355803773
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +641,7 @@ GameObject:
   - component: {fileID: 1598766134243082384}
   - component: {fileID: 3859236244046689281}
   - component: {fileID: 8925668127991415170}
+  - component: {fileID: 1615986954721027736}
   m_Layer: 0
   m_Name: TeacherSprite
   m_TagString: Untagged
@@ -661,7 +727,7 @@ Animator:
   m_GameObject: {fileID: 7519249275503715756}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 340a8487af2814fce8b4a7c6250ea5c7, type: 2}
+  m_Controller: {fileID: 9100000, guid: a7c3bdb8f76d54368a7ddcbdbd19056f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -672,3 +738,42 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1615986954721027736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7519249275503715756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0af1aeda95164a7d828edcac9f9f441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sqaureHeadSpritesMale:
+  - {fileID: 1469529726, guid: ebcdc310f863d4945afc73f8c041ba40, type: 3}
+  - {fileID: 206137229, guid: ebcdc310f863d4945afc73f8c041ba40, type: 3}
+  - {fileID: -287429296, guid: ebcdc310f863d4945afc73f8c041ba40, type: 3}
+  sqaureHeadSpritesFemale:
+  - {fileID: -1257014605, guid: 5ec471817e8994138b61af9e45f139b4, type: 3}
+  - {fileID: -1765694053, guid: 5ec471817e8994138b61af9e45f139b4, type: 3}
+  - {fileID: 2021425565, guid: 5ec471817e8994138b61af9e45f139b4, type: 3}
+  circleHeadSpritesMale:
+  - {fileID: -1453912087, guid: 5a2c4cfc2018442d997eaaa0a82dd119, type: 3}
+  - {fileID: 488288471, guid: 5a2c4cfc2018442d997eaaa0a82dd119, type: 3}
+  - {fileID: -1508010072, guid: 5a2c4cfc2018442d997eaaa0a82dd119, type: 3}
+  circleHeadSpritesFemale:
+  - {fileID: -596346905, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
+  - {fileID: 180127285, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
+  - {fileID: 1634380324, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
+  TriangleHeadSpritesMale:
+  - {fileID: 299710594, guid: 65ead502ac79f44e9b8d737ba80829e9, type: 3}
+  - {fileID: 1317541900, guid: 65ead502ac79f44e9b8d737ba80829e9, type: 3}
+  - {fileID: 118895061, guid: 65ead502ac79f44e9b8d737ba80829e9, type: 3}
+  TriangleHeadSpritesFemale:
+  - {fileID: -749806677, guid: ff7a95acfed7a4851a6d4eff158f89de, type: 3}
+  - {fileID: -1650217583, guid: ff7a95acfed7a4851a6d4eff158f89de, type: 3}
+  - {fileID: -1787840473, guid: ff7a95acfed7a4851a6d4eff158f89de, type: 3}
+  headRenderer: {fileID: 8046851824061203557}
+  headType: Triangle
+  sex: Female

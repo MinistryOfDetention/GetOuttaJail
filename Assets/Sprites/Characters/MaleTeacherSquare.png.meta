@@ -1,0 +1,745 @@
+fileFormatVersion: 2
+guid: ebcdc310f863d4945afc73f8c041ba40
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MaleTeacherSquare_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1823
+        width: 137
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54655a598d25a4976a0c61baace32664
+      internalID: 206137229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_4
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1817
+        width: 142
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668e7e54caa5f42de93e2c2b91588fdc
+      internalID: -682999507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_17
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1813
+        width: 160
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87769a7290c254deaa521d5fb850a6e5
+      internalID: 958428288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1826
+        width: 129
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8790e6e3b964769b129955057ff05b
+      internalID: 1469529726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_21
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 1811
+        width: 164
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efce073d71984c219198a73ce9efbdd
+      internalID: -619285717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_22
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1824
+        width: 134
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b533572afa36e43f299e4423aacd796e
+      internalID: -287429296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_23
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 1819
+        width: 95
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6f166bde9514abb831d916cda2a4a9
+      internalID: 1690731558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_24
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1827
+        width: 98
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a088dc76053f45128a7abe6461fae52
+      internalID: 108321260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_31
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1658
+        width: 97
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc69b772eb2ad4ef7bbd9e4d5f84fe9b
+      internalID: -1890376157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_32
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1662
+        width: 98
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9113d4a6f079d45da83b74652dec85e4
+      internalID: -2128248070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_33
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1657
+        width: 97
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a4ca9ad49814638a429ce5618d4741
+      internalID: -764758058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_34
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1649
+        width: 98
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423636dbf5db947ccaf33e36b205a362
+      internalID: 1609585516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_35
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 1651
+        width: 99
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca3f52469c8f470daff99d2db880c06
+      internalID: -1056974158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_36
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1657
+        width: 97
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2debeba4cbc50438c9334f8cf806e557
+      internalID: 1234661141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_37
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1656
+        width: 99
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abf3cbc755ef4ec8a92364d0f2c83c9
+      internalID: 1251285178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_38
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 1658
+        width: 100
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65844c6c3d4584365b316084055220ce
+      internalID: 1469022780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_39
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1489
+        width: 88
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de94868b968cf4278ae0eef3d23f1491
+      internalID: 1151158277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_41
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1484
+        width: 77
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8337c693e049649fc9e85d5ab1d8f517
+      internalID: -1524956863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_42
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1488
+        width: 89
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934956ad6d88c426dbc50d9bc0cdfa2c
+      internalID: -1120477650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_43
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1486
+        width: 95
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeee000ffa65e44fbac6c000bbe293a2
+      internalID: 1241075021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_44
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1487
+        width: 95
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555fd0a1fd9044b279c41982e1826d27
+      internalID: -847755981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_45
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1483
+        width: 88
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2342aefcefac04e2faf20945662d354c
+      internalID: -1604038871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_46
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1485
+        width: 88
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a05a23b29594170a9deaef91bd1c25
+      internalID: -246679384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_47
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 1486
+        width: 102
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea85002e91b74d589f1f2f009874fa5
+      internalID: -1590274658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_48
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1496
+        width: 26
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe4ac52e835349899fb15e0c1f415e0
+      internalID: 1711129621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_49
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1315
+        width: 98
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7665e3473441a4184b9255f358b5eb62
+      internalID: 1109347257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleTeacherSquare_50
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1313
+        width: 100
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece76c947592e461882e497cc465a0b6
+      internalID: 2057313965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      MaleTeacherSquare_0: 1403738993
+      MaleTeacherSquare_1: 2081306161
+      MaleTeacherSquare_10: -1473812692
+      MaleTeacherSquare_11: 240646793
+      MaleTeacherSquare_12: -1469316827
+      MaleTeacherSquare_13: -1378186026
+      MaleTeacherSquare_14: 1702032078
+      MaleTeacherSquare_15: -2031178861
+      MaleTeacherSquare_16: -986350995
+      MaleTeacherSquare_17: 958428288
+      MaleTeacherSquare_18: -464509792
+      MaleTeacherSquare_19: -1797303725
+      MaleTeacherSquare_2: 206137229
+      MaleTeacherSquare_20: 1469529726
+      MaleTeacherSquare_21: -619285717
+      MaleTeacherSquare_22: -287429296
+      MaleTeacherSquare_23: 1690731558
+      MaleTeacherSquare_24: 108321260
+      MaleTeacherSquare_25: -259729585
+      MaleTeacherSquare_26: -1738819775
+      MaleTeacherSquare_27: -471147820
+      MaleTeacherSquare_28: 1768172094
+      MaleTeacherSquare_29: -668790335
+      MaleTeacherSquare_3: 1028362467
+      MaleTeacherSquare_30: 1788833816
+      MaleTeacherSquare_31: -1890376157
+      MaleTeacherSquare_32: -2128248070
+      MaleTeacherSquare_33: -764758058
+      MaleTeacherSquare_34: 1609585516
+      MaleTeacherSquare_35: -1056974158
+      MaleTeacherSquare_36: 1234661141
+      MaleTeacherSquare_37: 1251285178
+      MaleTeacherSquare_38: 1469022780
+      MaleTeacherSquare_39: 1151158277
+      MaleTeacherSquare_4: -682999507
+      MaleTeacherSquare_40: 1657385793
+      MaleTeacherSquare_41: -1524956863
+      MaleTeacherSquare_42: -1120477650
+      MaleTeacherSquare_43: 1241075021
+      MaleTeacherSquare_44: -847755981
+      MaleTeacherSquare_45: -1604038871
+      MaleTeacherSquare_46: -246679384
+      MaleTeacherSquare_47: -1590274658
+      MaleTeacherSquare_48: 1711129621
+      MaleTeacherSquare_49: 1109347257
+      MaleTeacherSquare_5: 1247773410
+      MaleTeacherSquare_50: 2057313965
+      MaleTeacherSquare_6: -876517956
+      MaleTeacherSquare_7: 1818180807
+      MaleTeacherSquare_8: -118919111
+      MaleTeacherSquare_9: 2000707786
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

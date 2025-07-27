@@ -17,13 +17,20 @@ public class TeacherScript : MonoBehaviour
     public Transform[] patrolWaypoints;
     public int currentPatrolWaypointIndex = 0;
 
+    public float stunTime;
+
     public float speed;
+
+    public GameObject stunIconPrefab;
+    private GameObject stunIcon;
+    private float startingSpeed;
     private UnityEngine.AI.NavMeshAgent agent;
     private Vector3 nextDest;
     private bool playerDetected = false;
-
+    //test
     private bool isPatrolling = true;
     private bool isChasing = false;
+    private bool isMoving = false;
 
     public float waitTime = 0.0f;
     public float defaultWaitTime = 1.0f;
@@ -31,20 +38,31 @@ public class TeacherScript : MonoBehaviour
     private Animator animator;
     private Vector2 lastDirection = Vector2.zero;
 
+    // Audio
+    public CharacterAudio characterAudio;
+    public bool walkingTimerActive = false;
+    public float footStepInterval = 0.45f;
+    private Boolean Stunned = false;
+    public string startAnimation = "TeacherIdleDown";
+
     void Start()
-    {   
+    {
+        startingSpeed = speed;
         animator = GetComponentInChildren<Animator>();
         if (animator == null)
         {
             Debug.LogError("Animator component not found on TeacherScript.");
-        } 
+        }
+        animator.Play(startAnimation);
         visionCone = transform.GetChild(0);
         nextDest = transform.position;
 
-        if (isPatrolling && currentPatrolWaypointIndex < patrolWaypoints.Length)
+        if (isPatrolling && patrolWaypoints.Length > 0 && currentPatrolWaypointIndex < patrolWaypoints.Length)
         {
             target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
         }
+
+
     }
 
     class Node
@@ -185,69 +203,146 @@ public class TeacherScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPatrolling)
+        if (!Stunned)
         {
-            if (waitTime > 0)
+            if (isPatrolling)
             {
-                waitTime -= Time.deltaTime;
-                if (waitTime <= 0)
+                if (waitTime > 0)
                 {
-                    currentPatrolWaypointIndex++;
-                    if (currentPatrolWaypointIndex >= patrolWaypoints.Length)
+                    waitTime -= Time.deltaTime;
+                    if (waitTime <= 0)
                     {
-                        currentPatrolWaypointIndex = 0;
+                        currentPatrolWaypointIndex++;
+                        if (currentPatrolWaypointIndex >= patrolWaypoints.Length)
+                        {
+                            currentPatrolWaypointIndex = 0;
+                        }
+
+                        target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
                     }
-
-                    target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
                 }
-            }
-            else
-            {
-                float distanceToTarget = Vector3.Magnitude(target.transform.position - transform.position);
-                if (isPatrolling && distanceToTarget < 1.0f)
+                else if (target)
                 {
-                    waitTime = defaultWaitTime;
+                    float distanceToTarget = Vector3.Magnitude(target.transform.position - transform.position);
+                    if (isPatrolling && distanceToTarget < 1.0f)
+                    {
+                        waitTime = defaultWaitTime;
+                    }
                 }
             }
-        }
 
 
-        if (target)
-        {
-            // Face the target (either the player or patrol waypoint)
-            Vector2 targ = new Vector2(target.transform.position.x - transform.position.x, target.transform.position.y - transform.position.y);
-            float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg - 90f;
-            visionCone.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-
-            if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
+            if (target)
             {
-                var nextHop = Astar();
-                nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
-            }
+                // Face the target (either the player or patrol waypoint)
+                Vector2 targ = new Vector2(target.transform.position.x - transform.position.x, target.transform.position.y - transform.position.y);
+                float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg - 90f;
+                visionCone.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-            // Move towards the next destination
-            Vector2 direction = (nextDest - transform.position).normalized;
-            HandleAnimation(direction);
-            transform.position = Vector3.MoveTowards(transform.position, nextDest, speed * Time.deltaTime);
+                if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
+                {
+                    var nextHop = Astar();
+                    nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
+                }
+
+                // Move towards the next destination
+                Vector2 direction = (nextDest - transform.position).normalized;
+                HandleAnimation(direction);
+                transform.position = Vector3.MoveTowards(transform.position, nextDest, speed * Time.deltaTime);
+            }
         }
+        else
+        {
+            // if stunned
+            animator.Play("TeacherIdleDown");
+        }
+    }
+
+
+    private IEnumerator StunCoroutine;
+    private IEnumerator StunIEnumerator()
+    {
+        float timer = stunTime;
+
+        if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
+        {
+            var nextHop = Astar();
+            nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
+            isMoving = false;
+        }
+        else
+        {
+            isMoving = true;
+        }
+
+        while (timer > 0)
+        {
+            yield return null;
+            timer -= Time.deltaTime;
+        }
+
+        Debug.Log("Should be here ");
+        Stunned = false;
+        Destroy(stunIcon);
+    }
+    void Stun()
+    {
+        // Activates the stun phase of the teacher.
+        Stunned = true;
+
+
+        if (StunCoroutine != null)
+        {
+            StopCoroutine(StunCoroutine);
+            Destroy(stunIcon);
+        }
+
+        stunIcon = Instantiate(stunIconPrefab, transform.position + Vector3.up * 2.5f, Quaternion.identity);
+        if (isMoving && !walkingTimerActive)
+        {
+            HandleFootstepAudio();
+        }
+
+        StunCoroutine = StunIEnumerator();
+
+        StartCoroutine(StunCoroutine);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            // If teacher collides with player then reload the scene.
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if (other.CompareTag("pen projectile"))
+        {
+            // Activate teacher stun timer.
+            other.GetComponent<PenProjectile>().drop();
+            Stun();
         }
     }
 
     public void TogglePatrolling()
     {
+        if (isPatrolling)
+        {
+            return; // Already patrolling, no need to toggle again
+        }
+        speed = startingSpeed; // Reset speed to original when patrolling
         isPatrolling = true;
         isChasing = false;
+
     }
 
     public void ToggleChasing()
     {
+        if (isChasing)
+        {
+            return; // Already chasing, no need to toggle again
+        }
+        speed *= 1; // Increase speed when chasing
+        characterAudio.PlayClip("detection");
         isPatrolling = false;
         isChasing = true;
     }
@@ -291,5 +386,25 @@ public class TeacherScript : MonoBehaviour
             animator.Play("TeacherMoveDown");
         }
         lastDirection = direction;
+    }
+
+
+    public void HandleFootstepAudio()
+    {
+        if (!walkingTimerActive)
+        {
+            StartCoroutine(FootstepCooldown());
+        }
+    }
+
+    private IEnumerator FootstepCooldown()
+    {
+        walkingTimerActive = true;
+        yield return new WaitForSeconds(footStepInterval);
+        if (characterAudio != null)
+        {
+            characterAudio.PlayClip("footsteps");
+        }
+        walkingTimerActive = false;
     }
 }

@@ -6,6 +6,8 @@ public class TeacherVision : MonoBehaviour
 {
     public GameObject player;
     public TeacherScript teacherScript;
+
+    // 0 = Circle, 1 = Square, 2 = Triangle
     public int[] canSeeThroughDisguises = new int[] { 0 };
     private SpriteRenderer sr;
 
@@ -39,7 +41,7 @@ public class TeacherVision : MonoBehaviour
                         {
                             if (currentPlayerDisguise == badDisguise)
                             {
-                                Debug.Log("Player detected");
+                                //Debug.Log("Player detected");
                                 teacherScript.target = player;
                                 teacherScript.ToggleChasing();
                                 sr.enabled = false;

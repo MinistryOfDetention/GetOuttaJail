@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
+using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class PlayerCollisionMovement : MonoBehaviour
 {
@@ -15,7 +18,9 @@ public class PlayerCollisionMovement : MonoBehaviour
     private float previousVertical;
 
     private Animator bodyAnimator;
-
+    public CharacterAudio characterAudio;
+    public bool walkingTimerActive = false;
+    public float footStepInterval = 0.4f;
 
     void Awake()
     {
@@ -85,14 +90,25 @@ public class PlayerCollisionMovement : MonoBehaviour
             movement = Vector2.zero;
         }
 
+        HandleAnimations();
+        HandleFootstepAudio();
+
         previousHorizontal = horizontal;
         previousVertical = vertical;
 
         if (Input.GetKeyDown("right shift"))
         {
-            var bulletRotationAngle = Vector3.SignedAngle(Vector3.up, movement, Vector3.forward);
-            var bulletRotation = Quaternion.AngleAxis(bulletRotationAngle, Vector3.forward);
-            GameObject penBullet = (GameObject)Instantiate(penBulletPrefab, transform.position, bulletRotation);
+            var inventory = GetComponent<Inventory>();
+            var penItem = inventory.RemoveItem("pen item");
+            
+            if (penItem != null)
+            {
+                var bulletRotationAngle = Vector3.SignedAngle(Vector3.up, movement, Vector3.forward);
+                var bulletRotation = Quaternion.AngleAxis(bulletRotationAngle, Vector3.forward);
+                GameObject penBullet = (GameObject)Instantiate(penBulletPrefab, transform.position, bulletRotation);
+                penBullet.GetComponent<PenProjectile>().itemDrop = penItem;
+            }
+            
         }
     }
 
@@ -127,6 +143,28 @@ public class PlayerCollisionMovement : MonoBehaviour
         {
             // Idle state, you can set an idle animation if needed
             bodyAnimator.Play("PlayerIdle");
+        }
+    }
+    private void HandleFootstepAudio()
+    {
+        if (movement == Vector2.zero || walkingTimerActive)
+        {
+            return;
+        }
+        else
+        {
+            StartCoroutine(FootstepTimer(footStepInterval));
+        }
+    }
+
+    IEnumerator FootstepTimer(float time)
+    {   
+        walkingTimerActive = true;
+        yield return new WaitForSeconds(time);
+        walkingTimerActive = false;
+        if (movement != Vector2.zero)
+        {
+            characterAudio.PlayClip("footsteps");
         }
     }
 }
