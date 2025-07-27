@@ -82,9 +82,17 @@ public class PlayerCollisionMovement : MonoBehaviour
 
         if (Input.GetKeyDown("right shift"))
         {
-            var bulletRotationAngle = Vector3.SignedAngle(Vector3.up, movement, Vector3.forward);
-            var bulletRotation = Quaternion.AngleAxis(bulletRotationAngle, Vector3.forward);
-            GameObject penBullet = (GameObject)Instantiate(penBulletPrefab, transform.position, bulletRotation);
+            var inventory = GetComponent<Inventory>();
+            var penItem = inventory.RemoveItem("pen item");
+            
+            if (penItem != null)
+            {
+                var bulletRotationAngle = Vector3.SignedAngle(Vector3.up, movement, Vector3.forward);
+                var bulletRotation = Quaternion.AngleAxis(bulletRotationAngle, Vector3.forward);
+                GameObject penBullet = (GameObject)Instantiate(penBulletPrefab, transform.position, bulletRotation);
+                penBullet.GetComponent<PenProjectile>().itemDrop = penItem;
+            }
+            
         }
     }
 

@@ -9,7 +9,7 @@ public class PenProjectile : MonoBehaviour
 {
 
     public float speed;
-    public GameObject itemPrefab;
+    public GameObject itemDrop;
 
     private float bounceBack = 0.5f; // The degree to which an item drop will spawn away from the collision.
 
@@ -34,6 +34,7 @@ public class PenProjectile : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
-        GameObject penDrop = (GameObject)Instantiate(itemPrefab, transform.position + (transform.up*-bounceBack), Quaternion.identity);
+        itemDrop.transform.position = transform.position + (transform.up * -bounceBack);
+        itemDrop.SetActive(true);
     }
 }

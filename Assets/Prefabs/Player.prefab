@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  penBulletPrefab: {fileID: 0}
+  penBulletPrefab: {fileID: 2857815606832727088, guid: 664206b1f0bc74ee5a6ed477cb5a781d, type: 3}
 --- !u!114 &4220951761077271045
 MonoBehaviour:
   m_ObjectHideFlags: 0
