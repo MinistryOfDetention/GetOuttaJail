@@ -11,12 +11,12 @@ public class Chris : MonoBehaviour
 
     private Boolean maskFalling = false;
     private float vel = 0.0f;
-    private float acc = 0.000015f;
+    private float acc = 1f;
     void Start()
     {
-        eggMask.transform.position = transform.position + Vector3.up * 0.7f;
+        eggMask.transform.position = transform.position + Vector3.up * 0.85f + Vector3.left * 0.1f;
         eggMask.GetComponent<BoxCollider2D>().enabled = false;
-     
+
     }
 
     // Update is called once per frame
@@ -25,13 +25,16 @@ public class Chris : MonoBehaviour
         if (maskFalling)
         {
             vel -= acc;
-            eggMask.transform.position += Vector3.up * vel;
-            eggMask.transform.position += Vector3.right * 0.001f;
+            eggMask.transform.position += Vector3.up * vel * Time.deltaTime;
+            eggMask.transform.position += Vector3.right * 1.5f * Time.deltaTime;
 
-            if (eggMask.transform.position.y < transform.position.y - 1.5)
+            if (eggMask.transform.position.y < transform.position.y - 0.4)
             {
                 maskFalling = false;
                 eggMask.GetComponent<BoxCollider2D>().enabled = true;
+                // child the egg mask to the scene instead of the gameObject
+                eggMask.transform.parent = eggMask.transform.parent.transform.parent.transform.parent.transform.parent = null;
+                Destroy(gameObject);
             }
         }
     }
@@ -43,7 +46,7 @@ public class Chris : MonoBehaviour
             collision.GetComponent<PenProjectile>().drop();
             //Trigger mask falling off.
             maskFalling = true;
-            vel = 0.007f;
+            vel = 5.0f;
         }
     }
 }
