@@ -249,6 +249,10 @@ PrefabInstance:
       propertyPath: patrolWaypoints.Array.data[2]
       value: 
       objectReference: {fileID: 1829824100}
+    - target: {fileID: 3882884901871163777, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5202607504160097919, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1286,7 +1290,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2719270405913662522, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
 --- !u!1001 &1382943530
 PrefabInstance:
