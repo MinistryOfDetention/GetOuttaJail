@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
 using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
@@ -102,7 +101,7 @@ public class PlayerCollisionMovement : MonoBehaviour
         previousHorizontal = horizontal;
         previousVertical = vertical;
 
-        if (Input.GetKeyDown("right shift"))
+        if (Input.GetKeyDown("right shift") || Input.GetKeyDown("left shift"))
         {
             var inventory = GetComponent<Inventory>();
             var penItem = inventory.RemoveItem("pen item");
