@@ -15,6 +15,7 @@ public class Chris : MonoBehaviour
     void Start()
     {
         eggMask.transform.position = transform.position + Vector3.up * 0.7f;
+        eggMask.GetComponent<BoxCollider2D>().enabled = false;
      
     }
 
@@ -25,10 +26,12 @@ public class Chris : MonoBehaviour
         {
             vel -= acc;
             eggMask.transform.position += Vector3.up * vel;
+            eggMask.transform.position += Vector3.right * 0.001f;
 
             if (eggMask.transform.position.y < transform.position.y - 1.5)
             {
                 maskFalling = false;
+                eggMask.GetComponent<BoxCollider2D>().enabled = true;
             }
         }
     }
@@ -40,7 +43,7 @@ public class Chris : MonoBehaviour
             collision.GetComponent<PenProjectile>().drop();
             //Trigger mask falling off.
             maskFalling = true;
-            vel = 0.01f;
+            vel = 0.007f;
         }
     }
 }
