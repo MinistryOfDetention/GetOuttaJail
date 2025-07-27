@@ -3915,7 +3915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3136455870707296914, guid: 6fa6d7b1525894b0288ac6b6ac08bf24, type: 3}
       propertyPath: sentences.Array.size
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3136455870707296914, guid: 6fa6d7b1525894b0288ac6b6ac08bf24, type: 3}
       propertyPath: speakers.Array.data[0]
@@ -3923,27 +3923,27 @@ PrefabInstance:
       objectReference: {fileID: 1135572623}
     - target: {fileID: 3136455870707296914, guid: 6fa6d7b1525894b0288ac6b6ac08bf24, type: 3}
       propertyPath: sentences.Array.data[0]
-      value: Is that the Mask of Loki?!
+      value: Well, this sucks.
       objectReference: {fileID: 0}
     - target: {fileID: 3136455870707296914, guid: 6fa6d7b1525894b0288ac6b6ac08bf24, type: 3}
       propertyPath: sentences.Array.data[1]
-      value: ...I'll need to press WASD to move there.
+      value: Stuck in detention...
       objectReference: {fileID: 0}
     - target: {fileID: 3136455870707296914, guid: 6fa6d7b1525894b0288ac6b6ac08bf24, type: 3}
       propertyPath: sentences.Array.data[2]
-      value: ...I'll need to press WASD to move there.
+      value: In the bathroom...
       objectReference: {fileID: 0}
     - target: {fileID: 3136455870707296914, guid: 6fa6d7b1525894b0288ac6b6ac08bf24, type: 3}
       propertyPath: sentences.Array.data[3]
-      value: ...I'll need to press WASD to move there.
+      value: And it's still lunchtim-- WHOA!
       objectReference: {fileID: 0}
     - target: {fileID: 3136455870707296914, guid: 6fa6d7b1525894b0288ac6b6ac08bf24, type: 3}
       propertyPath: sentences.Array.data[4]
-      value: Please save m--- WHOA!
+      value: Is that the Mask of Loki?!
       objectReference: {fileID: 0}
     - target: {fileID: 3136455870707296914, guid: 6fa6d7b1525894b0288ac6b6ac08bf24, type: 3}
       propertyPath: sentences.Array.data[5]
-      value: Please save m--- WHOA!
+      value: ...I'll need to press WASD to move there.
       objectReference: {fileID: 0}
     - target: {fileID: 5248895603471499469, guid: 6fa6d7b1525894b0288ac6b6ac08bf24, type: 3}
       propertyPath: m_LocalPosition.x

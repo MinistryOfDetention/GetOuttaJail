@@ -6,11 +6,33 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class DisguiseUnlock : MonoBehaviour
 {
+    public bool isFirstMask = true;
+
+    public float firstMaskTimer = 7.5f;
+
     public bool isEggMask = false;
+
+    private SpriteRenderer sr;
 
     private void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
 
+        if (isFirstMask)
+        {
+            sr.enabled = false;
+        }
+    }
+
+    private void Update() {
+        if (isFirstMask)
+        {
+            firstMaskTimer -= Time.deltaTime;
+            if (firstMaskTimer <= 0)
+            {
+                sr.enabled = true;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

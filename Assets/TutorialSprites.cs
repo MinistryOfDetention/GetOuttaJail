@@ -6,7 +6,7 @@ using UnityEngine;
 public class TutorialSprites : MonoBehaviour
 {
     public GameObject spritesObject;
-    public float delayShowSprites = 10f;
+    public float delayShowSprites = 30f;
 
     void Start()
     {   
