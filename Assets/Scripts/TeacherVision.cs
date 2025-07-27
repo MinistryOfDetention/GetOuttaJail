@@ -37,7 +37,7 @@ public class TeacherVision : MonoBehaviour
                         {
                             if (currentPlayerDisguise == badDisguise)
                             {
-                                Debug.Log("Player detected");
+                                //Debug.Log("Player detected");
                                 teacherScript.target = player;
                                 teacherScript.ToggleChasing();
                             }

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - pen item
+  - pen projectile
   layers:
   - Default
   - TransparentFX

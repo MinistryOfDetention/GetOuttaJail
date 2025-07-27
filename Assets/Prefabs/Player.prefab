@@ -461,6 +461,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7066708413790258598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8900808102154229024}
+  - component: {fileID: 7738997494244262994}
+  m_Layer: 0
+  m_Name: PlayerAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8900808102154229024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066708413790258598}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.9522393, y: 1.7516623, z: -0.029971963}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6396519636273914979}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7738997494244262994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066708413790258598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add69a68447244c7c8ee91136d5d3ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footsteps:
+  - {fileID: 8300000, guid: 77467051cf9d44aedb51c14455753476, type: 3}
+  - {fileID: 8300000, guid: 5b26d7b50872647bca60026e6e5c0f54, type: 3}
+  - {fileID: 8300000, guid: f639ed191e7cc4a4cbf3060c7d7a1c44, type: 3}
+  - {fileID: 8300000, guid: b66797ce52cb642038b5beac0e92ff57, type: 3}
+  - {fileID: 8300000, guid: eff8e9dd5ae864df695b30431c163c7e, type: 3}
+  maskUnlockSound: {fileID: 8300000, guid: 0a721dd5a57e949a99a0c3bb7b464d96, type: 3}
+  maskSwapSounds:
+  - {fileID: 8300000, guid: bf1a342231cb4417d854f8357bebebce, type: 3}
+  - {fileID: 8300000, guid: 0c51dbbfc786546c28ed80acc7d17b5c, type: 3}
+  - {fileID: 8300000, guid: 7c7c781b64b1340bcaa5890b90c37fc7, type: 3}
+  - {fileID: 8300000, guid: c4dc871051d504e7099b8d4bbb71863c, type: 3}
+  doorOpenSound: {fileID: 8300000, guid: bc4acbb9138e94c17bcbbb66ee3ede47, type: 3}
+  detectionSound: {fileID: 8300000, guid: eb11b4d0b4b7e40f0b08140e1a446ccb, type: 3}
 --- !u!1 &9005042386770040034
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +588,7 @@ Transform:
   m_Children:
   - {fileID: 32183399222068619}
   - {fileID: 3255952972682057609}
+  - {fileID: 8900808102154229024}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &8488884934697223641
@@ -572,6 +631,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  characterAudio: {fileID: 7738997494244262994}
+  walkingTimerActive: 0
+  footStepInterval: 0.4
   penBulletPrefab: {fileID: 2857815606832727088, guid: 664206b1f0bc74ee5a6ed477cb5a781d, type: 3}
 --- !u!114 &4220951761077271045
 MonoBehaviour:
@@ -647,3 +709,4 @@ MonoBehaviour:
   - {fileID: 587626737, guid: 0a89b14ffd6064e0e97496f560c47272, type: 3}
   disguiseRenderer: {fileID: 7800467571247907311}
   currentDisguise: 0
+  characterAudio: {fileID: 7738997494244262994}
