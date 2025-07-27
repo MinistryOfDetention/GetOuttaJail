@@ -102,7 +102,7 @@ public class PlayerCollisionMovement : MonoBehaviour
         previousHorizontal = horizontal;
         previousVertical = vertical;
 
-        if (Input.GetKeyDown("right shift"))
+        if (Input.GetKeyDown("right shift") || Input.GetKeyDown("left shift"))
         {
             var inventory = GetComponent<Inventory>();
             var penItem = inventory.RemoveItem("pen item");
