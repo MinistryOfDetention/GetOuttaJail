@@ -58,6 +58,7 @@ MonoBehaviour:
   currentPatrolWaypointIndex: 0
   stunTime: 5
   speed: 3
+  stunIconPrefab: {fileID: 282536350348174471, guid: 4c95a0295835c4816a2e42b0ac8502f3, type: 3}
   waitTime: 0
   characterAudio: {fileID: 3444832758985999646}
   walkingTimerActive: 0
