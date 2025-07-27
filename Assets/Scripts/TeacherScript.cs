@@ -54,7 +54,7 @@ public class TeacherScript : MonoBehaviour
             Debug.LogError("Animator component not found on TeacherScript.");
         }
         animator.Play(startAnimation);
-        visionCone = transform.FindChild("Vision");
+        visionCone = transform.Find("Vision");
         nextDest = transform.position;
 
         if (isPatrolling && patrolWaypoints.Length > 0 && currentPatrolWaypointIndex < patrolWaypoints.Length)
