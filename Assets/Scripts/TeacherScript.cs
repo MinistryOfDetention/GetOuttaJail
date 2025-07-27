@@ -281,8 +281,8 @@ public class TeacherScript : MonoBehaviour
             timer -= Time.deltaTime;
         }
 
+        Debug.Log("Should be here ");
         Stunned = false;
-        Destroy(stunIcon);
         Destroy(stunIcon);
     }
     void Stun()
@@ -302,14 +302,6 @@ public class TeacherScript : MonoBehaviour
         {
             HandleFootstepAudio();
         }
-
-        stunIcon = Instantiate(stunIconPrefab, transform.position + Vector3.up * 2.5f, Quaternion.identity);
-        if (isMoving && !walkingTimerActive)
-        {
-            HandleFootstepAudio();
-        }
-
-        stunIcon = Instantiate(stunIconPrefab, transform.position + Vector3.up * 2.5f, Quaternion.identity);
 
         StunCoroutine = StunIEnumerator();
 
