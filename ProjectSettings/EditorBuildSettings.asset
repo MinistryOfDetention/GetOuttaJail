@@ -33,6 +33,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GameRooms/PrincipalsOffice.unity
     guid: cd684336dbdba77439d64db75c35eb2a
   - enabled: 1
+    path: Assets/Scenes/GameRooms/Intermission.unity
+    guid: ab0cefe2edf538f4ba1918645168c8ce
+  - enabled: 1
     path: Assets/Scenes/GameRooms/hallway1EndGame.unity
     guid: 8c12bbbb358474a029b536a2f70c2498
   - enabled: 1

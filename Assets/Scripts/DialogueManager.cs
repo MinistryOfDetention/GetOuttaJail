@@ -141,7 +141,7 @@ public class DialogueManager : MonoBehaviour
 
         if (LevelMaster.inEndgameDialogue)
         {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(11);
             LevelMaster.inEndgameDialogue = false;
         }
     }
