@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 1598766134243082384}
   - component: {fileID: 3859236244046689281}
   - component: {fileID: 8925668127991415170}
+  - component: {fileID: 1615986954721027736}
   m_Layer: 0
   m_Name: TeacherSprite
   m_TagString: Untagged
@@ -658,7 +659,7 @@ Animator:
   m_GameObject: {fileID: 7519249275503715756}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 340a8487af2814fce8b4a7c6250ea5c7, type: 2}
+  m_Controller: {fileID: 9100000, guid: a7c3bdb8f76d54368a7ddcbdbd19056f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -669,3 +670,42 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1615986954721027736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7519249275503715756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0af1aeda95164a7d828edcac9f9f441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sqaureHeadSpritesMale:
+  - {fileID: 1469529726, guid: ebcdc310f863d4945afc73f8c041ba40, type: 3}
+  - {fileID: 206137229, guid: ebcdc310f863d4945afc73f8c041ba40, type: 3}
+  - {fileID: -287429296, guid: ebcdc310f863d4945afc73f8c041ba40, type: 3}
+  sqaureHeadSpritesFemale:
+  - {fileID: -1257014605, guid: 5ec471817e8994138b61af9e45f139b4, type: 3}
+  - {fileID: -1765694053, guid: 5ec471817e8994138b61af9e45f139b4, type: 3}
+  - {fileID: 2021425565, guid: 5ec471817e8994138b61af9e45f139b4, type: 3}
+  circleHeadSpritesMale:
+  - {fileID: -1453912087, guid: 5a2c4cfc2018442d997eaaa0a82dd119, type: 3}
+  - {fileID: 488288471, guid: 5a2c4cfc2018442d997eaaa0a82dd119, type: 3}
+  - {fileID: -1508010072, guid: 5a2c4cfc2018442d997eaaa0a82dd119, type: 3}
+  circleHeadSpritesFemale:
+  - {fileID: -596346905, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
+  - {fileID: 180127285, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
+  - {fileID: 1634380324, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
+  TriangleHeadSpritesMale:
+  - {fileID: 299710594, guid: 65ead502ac79f44e9b8d737ba80829e9, type: 3}
+  - {fileID: 1317541900, guid: 65ead502ac79f44e9b8d737ba80829e9, type: 3}
+  - {fileID: 118895061, guid: 65ead502ac79f44e9b8d737ba80829e9, type: 3}
+  TriangleHeadSpritesFemale:
+  - {fileID: -749806677, guid: ff7a95acfed7a4851a6d4eff158f89de, type: 3}
+  - {fileID: -1650217583, guid: ff7a95acfed7a4851a6d4eff158f89de, type: 3}
+  - {fileID: -1787840473, guid: ff7a95acfed7a4851a6d4eff158f89de, type: 3}
+  headRenderer: {fileID: 8046851824061203557}
+  headType: Triangle
+  sex: Female

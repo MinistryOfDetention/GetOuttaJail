@@ -3511,6 +3511,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teacher
       objectReference: {fileID: 0}
+    - target: {fileID: 1615986954721027736, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: sex
+      value: Male
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615986954721027736, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: headType
+      value: Square
+      objectReference: {fileID: 0}
     - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.53
@@ -3569,7 +3577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4661154939126554238, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.77
+      value: 0.86
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

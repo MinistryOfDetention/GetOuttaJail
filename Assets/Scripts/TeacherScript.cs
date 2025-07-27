@@ -328,7 +328,7 @@ public class TeacherScript : MonoBehaviour
         {
             return; // Already chasing, no need to toggle again
         }
-        speed *= 2; // Increase speed when chasing
+        speed *= 1; // Increase speed when chasing
         characterAudio.PlayClip("detection");
         isPatrolling = false;
         isChasing = true;
