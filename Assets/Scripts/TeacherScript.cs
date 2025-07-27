@@ -26,7 +26,7 @@ public class TeacherScript : MonoBehaviour
     private bool isChasing = false;
 
     public float waitTime = 0.0f;
-    private float defaultWaitTime = 1.0f;
+    public float defaultWaitTime = 1.0f;
 
     private Animator animator;
     private Vector2 lastDirection = Vector2.zero;
