@@ -143,3 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a302a340f397e46ae59240bffe7aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFirstMask: 0
+  firstMaskTimer: 7.5
+  isEggMask: 0

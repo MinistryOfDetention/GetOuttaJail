@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Egg Mask unlock
       objectReference: {fileID: 0}
+    - target: {fileID: 6978535674610438968, guid: 1c990f90d47fa4006b52f747348d5cdc, type: 3}
+      propertyPath: isFirstMask
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
