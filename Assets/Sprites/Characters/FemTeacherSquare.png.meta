@@ -1,0 +1,744 @@
+fileFormatVersion: 2
+guid: 5ec471817e8994138b61af9e45f139b4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FemTeacherSquare_2
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1826
+        width: 150
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3575f81cda0642cca63b6e9798f371e
+      internalID: -1765694053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_4
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1817
+        width: 142
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a024185835359445bb27c41a84872166
+      internalID: -303755994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_17
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1813
+        width: 138
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9182bf6e372b4a6490acdb73d112811
+      internalID: 200677275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1826
+        width: 129
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa514c5ee47543178565e51f634b745
+      internalID: -1257014605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_21
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 1811
+        width: 164
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161b6f0a282324729b9ae5f6d915c198
+      internalID: -1332168753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_22
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 1824
+        width: 136
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1eef60142384e76b45acadda3f019e
+      internalID: 2021425565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_23
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 1819
+        width: 95
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff7548764df147b1a1d34478ac31008
+      internalID: -488303319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_24
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1827
+        width: 98
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1630738c5ef044cf8b5bfab8b125a23
+      internalID: 1223689006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_31
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1658
+        width: 97
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4f346d667d244dfacaeeafcff01dc9
+      internalID: 537685149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_32
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1662
+        width: 98
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e615c7556d634a5a9cc6b649678f844
+      internalID: -140232763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_33
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1657
+        width: 97
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ecc3f12890b4445abda7d09efb3a87
+      internalID: 1396993351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_34
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1649
+        width: 98
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd966661c366a4632b62aae1f58cbbed
+      internalID: -602240603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_35
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 1651
+        width: 99
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a13887d706534cdfb9fe22f81c6d379
+      internalID: -46903306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_36
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1657
+        width: 97
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca503f922b924dc1a22418ba9a251c9
+      internalID: 1102675090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_37
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1656
+        width: 99
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb2d049be77b46d2a246c1adf8a6d2d
+      internalID: -1793253626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_38
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 1658
+        width: 100
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1942f928b21f416d8ea52d459b34f38
+      internalID: -2033269088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_39
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1489
+        width: 88
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bf2f8fa365e4c849be1c15dfd5f582
+      internalID: -271650648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_40
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1529
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c7bbd4fa4934d88adc28900070de78
+      internalID: 1930825574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_41
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1484
+        width: 77
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2096d5a42c7b464f96409451c2a8b13
+      internalID: 777592543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_42
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1488
+        width: 89
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f275f506d2040489fa92fe22c088e240
+      internalID: -173732983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_43
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1488
+        width: 95
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15fafa5c01084ee0b2b2118bca4a808
+      internalID: 1434411201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_44
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1487
+        width: 95
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b1afed988ea46648ee8103c912be1a
+      internalID: 756131402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_45
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1483
+        width: 88
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a74c98c4c854a9fbe1ea9d3794cfd3
+      internalID: 195556551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_46
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1486
+        width: 86
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594710619f06b41819fa5b288ca8837d
+      internalID: -595237427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_47
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 1487
+        width: 102
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6aa855eb7824110878d47951117f76
+      internalID: 256267071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_48
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1315
+        width: 98
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44ca86a91e3a4094b0b767abfab51a8
+      internalID: -1085985067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemTeacherSquare_49
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1313
+        width: 100
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5b5def7aaea48b7ac0385a479d1419
+      internalID: 1763263070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FemTeacherSquare_0: -1168375188
+      FemTeacherSquare_1: 1932451015
+      FemTeacherSquare_10: 55108599
+      FemTeacherSquare_11: 382212486
+      FemTeacherSquare_12: -603273825
+      FemTeacherSquare_13: 1061394190
+      FemTeacherSquare_14: 1199376322
+      FemTeacherSquare_15: 2113862916
+      FemTeacherSquare_16: -74220872
+      FemTeacherSquare_17: 200677275
+      FemTeacherSquare_18: -1742454129
+      FemTeacherSquare_19: -1490048251
+      FemTeacherSquare_2: -1765694053
+      FemTeacherSquare_20: -1257014605
+      FemTeacherSquare_21: -1332168753
+      FemTeacherSquare_22: 2021425565
+      FemTeacherSquare_23: -488303319
+      FemTeacherSquare_24: 1223689006
+      FemTeacherSquare_25: -1841101546
+      FemTeacherSquare_26: 257950577
+      FemTeacherSquare_27: -1972192937
+      FemTeacherSquare_28: 1240021408
+      FemTeacherSquare_29: 506324192
+      FemTeacherSquare_3: -705963253
+      FemTeacherSquare_30: -1391894934
+      FemTeacherSquare_31: 537685149
+      FemTeacherSquare_32: -140232763
+      FemTeacherSquare_33: 1396993351
+      FemTeacherSquare_34: -602240603
+      FemTeacherSquare_35: -46903306
+      FemTeacherSquare_36: 1102675090
+      FemTeacherSquare_37: -1793253626
+      FemTeacherSquare_38: -2033269088
+      FemTeacherSquare_39: -271650648
+      FemTeacherSquare_4: -303755994
+      FemTeacherSquare_40: 1930825574
+      FemTeacherSquare_41: 777592543
+      FemTeacherSquare_42: -173732983
+      FemTeacherSquare_43: 1434411201
+      FemTeacherSquare_44: 756131402
+      FemTeacherSquare_45: 195556551
+      FemTeacherSquare_46: -595237427
+      FemTeacherSquare_47: 256267071
+      FemTeacherSquare_48: -1085985067
+      FemTeacherSquare_49: 1763263070
+      FemTeacherSquare_5: -910882920
+      FemTeacherSquare_6: 1656190260
+      FemTeacherSquare_7: 302191420
+      FemTeacherSquare_8: -1339536278
+      FemTeacherSquare_9: 2014876153
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
