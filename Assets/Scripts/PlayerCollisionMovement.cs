@@ -13,6 +13,7 @@ public class PlayerCollisionMovement : MonoBehaviour
     public GameObject penBulletPrefab;
     private Rigidbody2D rb;
     private Vector2 movement;
+    private Vector2 lastMovementDir;
     private float previousHorizontal;
     private float previousVertical;
 
@@ -69,10 +70,12 @@ public class PlayerCollisionMovement : MonoBehaviour
         else if (Mathf.Abs(horizontal) > 0)
         {
             movement = new Vector2(horizontal, 0);
+            lastMovementDir = movement;
         }
         else if (Mathf.Abs(vertical) > 0)
         {
             movement = new Vector2(0, vertical);
+            lastMovementDir = movement;
         }
         else
         {
@@ -92,7 +95,7 @@ public class PlayerCollisionMovement : MonoBehaviour
             
             if (penItem != null)
             {
-                var bulletRotationAngle = Vector3.SignedAngle(Vector3.up, movement, Vector3.forward);
+                var bulletRotationAngle = Vector3.SignedAngle(Vector3.up, lastMovementDir, Vector3.forward);
                 var bulletRotation = Quaternion.AngleAxis(bulletRotationAngle, Vector3.forward);
                 GameObject penBullet = (GameObject)Instantiate(penBulletPrefab, transform.position, bulletRotation);
                 penBullet.GetComponent<PenProjectile>().itemDrop = penItem;

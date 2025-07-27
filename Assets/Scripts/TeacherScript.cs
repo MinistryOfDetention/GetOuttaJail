@@ -281,7 +281,6 @@ public class TeacherScript : MonoBehaviour
             timer -= Time.deltaTime;
         }
 
-        Debug.Log("Should be here ");
         Stunned = false;
         Destroy(stunIcon);
     }
