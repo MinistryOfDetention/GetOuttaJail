@@ -9,7 +9,7 @@ public class LevelMaster : MonoBehaviour
 
     public static bool playerInDialogue = false;
 
-    static bool tutorialDialogueStarted = false;
+    public static bool tutorialDialogueStarted = false;
 
     static bool controlsTutorialStarted = false;
 

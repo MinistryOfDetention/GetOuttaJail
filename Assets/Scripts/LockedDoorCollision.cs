@@ -24,15 +24,15 @@ public class LockedDoorCollision : MonoBehaviour
                 //Debug.Log("Door is locked...");
                 dm.AddDialogue(new string[] {
                 "Hmm... the door's locked.",
-                "I'll need a key for this door.",
-                "Maybe the principal will have the key..."
+                "I'll need an Egg mask for this door.",
+                "Maybe the principal will have the Egg mask..."
             });
                 LevelMaster.playerInDialogue = true;
             }
             else
             {
                 dm.AddDialogue(new string[] {
-                    "The key worked! I'm free!!"
+                    "The Egg mask worked! I'm free!!"
                 });
                 LevelMaster.inEndgameDialogue = true;
             }
