@@ -19,9 +19,12 @@ public class EntranceDoor : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        }
+        // Do nothing - cannot go backwards through rooms
+
+        // if (other.CompareTag("Player"))
+        // {
+        //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        // }
+        return;
     }
 }

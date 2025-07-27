@@ -20,11 +20,14 @@ public class TeacherScript : MonoBehaviour
     public float stunTime;
 
     public float speed;
+
+    public GameObject stunIconPrefab;
+    private GameObject stunIcon;
     private float startingSpeed;
     private UnityEngine.AI.NavMeshAgent agent;
     private Vector3 nextDest;
     private bool playerDetected = false;
-
+    //test
     private bool isPatrolling = true;
     private bool isChasing = false;
     private bool isMoving = false;
@@ -40,6 +43,7 @@ public class TeacherScript : MonoBehaviour
     public bool walkingTimerActive = false;
     public float footStepInterval = 0.45f;
     private Boolean Stunned = false;
+    public string startAnimation = "TeacherIdleDown";
 
     void Start()
     {
@@ -49,13 +53,16 @@ public class TeacherScript : MonoBehaviour
         {
             Debug.LogError("Animator component not found on TeacherScript.");
         }
+        animator.Play(startAnimation);
         visionCone = transform.GetChild(0);
         nextDest = transform.position;
 
-        if (isPatrolling && currentPatrolWaypointIndex < patrolWaypoints.Length)
+        if (isPatrolling && patrolWaypoints.Length > 0 && currentPatrolWaypointIndex < patrolWaypoints.Length)
         {
             target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
         }
+
+
     }
 
     class Node
@@ -214,7 +221,7 @@ public class TeacherScript : MonoBehaviour
                         target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
                     }
                 }
-                else
+                else if (target)
                 {
                     float distanceToTarget = Vector3.Magnitude(target.transform.position - transform.position);
                     if (isPatrolling && distanceToTarget < 1.0f)
@@ -257,16 +264,16 @@ public class TeacherScript : MonoBehaviour
     {
         float timer = stunTime;
 
-            if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
-            {
-                var nextHop = Astar();
-                nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
-                isMoving = false;
-            }
-            else
-            {
-                isMoving = true;
-            }
+        if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
+        {
+            var nextHop = Astar();
+            nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
+            isMoving = false;
+        }
+        else
+        {
+            isMoving = true;
+        }
 
         while (timer > 0)
         {
@@ -274,17 +281,23 @@ public class TeacherScript : MonoBehaviour
             timer -= Time.deltaTime;
         }
 
+        Debug.Log("Should be here ");
         Stunned = false;
+        Destroy(stunIcon);
     }
     void Stun()
     {
         // Activates the stun phase of the teacher.
         Stunned = true;
+
+
         if (StunCoroutine != null)
         {
             StopCoroutine(StunCoroutine);
+            Destroy(stunIcon);
         }
-        
+
+        stunIcon = Instantiate(stunIconPrefab, transform.position + Vector3.up * 2.5f, Quaternion.identity);
         if (isMoving && !walkingTimerActive)
         {
             HandleFootstepAudio();
@@ -323,7 +336,7 @@ public class TeacherScript : MonoBehaviour
     }
 
     public void ToggleChasing()
-    {   
+    {
         if (isChasing)
         {
             return; // Already chasing, no need to toggle again
@@ -378,7 +391,7 @@ public class TeacherScript : MonoBehaviour
 
     public void HandleFootstepAudio()
     {
-        if (!walkingTimerActive )
+        if (!walkingTimerActive)
         {
             StartCoroutine(FootstepCooldown());
         }
