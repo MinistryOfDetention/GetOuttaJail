@@ -22,6 +22,7 @@ public class DoorCollision : MonoBehaviour
         Debug.Log("Door collision detected with: " + other.gameObject.name);
         if (other.CompareTag("Player"))
         {
+            other.gameObject.GetComponentInChildren<CharacterAudio>().PlayClip("doorOpen");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

@@ -633,6 +633,8 @@ MonoBehaviour:
   moveSpeed: 5
   penBulletPrefab: {fileID: 0}
   characterAudio: {fileID: 7738997494244262994}
+  walkingTimerActive: 0
+  footStepInterval: 0.4
 --- !u!114 &4220951761077271045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,3 +709,4 @@ MonoBehaviour:
   - {fileID: 587626737, guid: 0a89b14ffd6064e0e97496f560c47272, type: 3}
   disguiseRenderer: {fileID: 7800467571247907311}
   currentDisguise: 0
+  characterAudio: {fileID: 7738997494244262994}

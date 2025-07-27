@@ -18,12 +18,14 @@ public class TeacherScript : MonoBehaviour
     public int currentPatrolWaypointIndex = 0;
 
     public float speed;
+    private float startingSpeed;
     private UnityEngine.AI.NavMeshAgent agent;
     private Vector3 nextDest;
     private bool playerDetected = false;
 
     private bool isPatrolling = true;
     private bool isChasing = false;
+    private bool isMoving = false;
 
     public float waitTime = 0.0f;
     private float defaultWaitTime = 1.0f;
@@ -31,13 +33,19 @@ public class TeacherScript : MonoBehaviour
     private Animator animator;
     private Vector2 lastDirection = Vector2.zero;
 
+    // Audio
+    public CharacterAudio characterAudio;
+    public bool walkingTimerActive = false;
+    public float footStepInterval = 0.45f;
+
     void Start()
-    {   
+    {
+        startingSpeed = speed;
         animator = GetComponentInChildren<Animator>();
         if (animator == null)
         {
             Debug.LogError("Animator component not found on TeacherScript.");
-        } 
+        }
         visionCone = transform.GetChild(0);
         nextDest = transform.position;
 
@@ -223,12 +231,22 @@ public class TeacherScript : MonoBehaviour
             {
                 var nextHop = Astar();
                 nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
+                isMoving = false;
+            }
+            else
+            {
+                isMoving = true;
             }
 
             // Move towards the next destination
             Vector2 direction = (nextDest - transform.position).normalized;
             HandleAnimation(direction);
             transform.position = Vector3.MoveTowards(transform.position, nextDest, speed * Time.deltaTime);
+        }
+        
+        if (isMoving && !walkingTimerActive)
+        {
+            HandleFootstepAudio();
         }
     }
 
@@ -242,12 +260,24 @@ public class TeacherScript : MonoBehaviour
 
     public void TogglePatrolling()
     {
+        if (isPatrolling)
+        {
+            return; // Already patrolling, no need to toggle again
+        }
+        speed = startingSpeed; // Reset speed to original when patrolling
         isPatrolling = true;
         isChasing = false;
+
     }
 
     public void ToggleChasing()
-    {
+    {   
+        if (isChasing)
+        {
+            return; // Already chasing, no need to toggle again
+        }
+        speed *= 2; // Increase speed when chasing
+        characterAudio.PlayClip("detection");
         isPatrolling = false;
         isChasing = true;
     }
@@ -291,5 +321,25 @@ public class TeacherScript : MonoBehaviour
             animator.Play("TeacherMoveDown");
         }
         lastDirection = direction;
+    }
+
+
+    public void HandleFootstepAudio()
+    {
+        if (!walkingTimerActive )
+        {
+            StartCoroutine(FootstepCooldown());
+        }
+    }
+
+    private IEnumerator FootstepCooldown()
+    {
+        walkingTimerActive = true;
+        yield return new WaitForSeconds(footStepInterval);
+        if (characterAudio != null)
+        {
+            characterAudio.PlayClip("footsteps");
+        }
+        walkingTimerActive = false;
     }
 }
