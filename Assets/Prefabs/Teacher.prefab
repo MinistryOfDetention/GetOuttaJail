@@ -31,6 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 227880184212590093}
   - {fileID: 8182647665917001198}
   - {fileID: 1613177259899843982}
   - {fileID: 1598766134243082384}
@@ -58,6 +59,9 @@ MonoBehaviour:
   stunTime: 5
   speed: 3
   waitTime: 0
+  characterAudio: {fileID: 3444832758985999646}
+  walkingTimerActive: 0
+  footStepInterval: 0.35
 --- !u!61 &5202607504160097919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -288,8 +292,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1770932505
-  m_SortingLayer: 1
+  m_SortingLayerID: -324153805
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -1453912087, guid: 5a2c4cfc2018442d997eaaa0a82dd119, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -302,6 +306,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5945112232446777347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 227880184212590093}
+  - component: {fileID: 3444832758985999646}
+  m_Layer: 0
+  m_Name: PlayerAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &227880184212590093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945112232446777347}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5777607, y: -1.7483377, z: -0.029971963}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1715753266785009102}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3444832758985999646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945112232446777347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add69a68447244c7c8ee91136d5d3ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footsteps:
+  - {fileID: 8300000, guid: 77467051cf9d44aedb51c14455753476, type: 3}
+  - {fileID: 8300000, guid: 5b26d7b50872647bca60026e6e5c0f54, type: 3}
+  - {fileID: 8300000, guid: f639ed191e7cc4a4cbf3060c7d7a1c44, type: 3}
+  - {fileID: 8300000, guid: b66797ce52cb642038b5beac0e92ff57, type: 3}
+  - {fileID: 8300000, guid: eff8e9dd5ae864df695b30431c163c7e, type: 3}
+  maskUnlockSound: {fileID: 8300000, guid: 0a721dd5a57e949a99a0c3bb7b464d96, type: 3}
+  maskSwapSounds:
+  - {fileID: 8300000, guid: bf1a342231cb4417d854f8357bebebce, type: 3}
+  - {fileID: 8300000, guid: 0c51dbbfc786546c28ed80acc7d17b5c, type: 3}
+  - {fileID: 8300000, guid: 7c7c781b64b1340bcaa5890b90c37fc7, type: 3}
+  - {fileID: 8300000, guid: c4dc871051d504e7099b8d4bbb71863c, type: 3}
+  doorOpenSound: {fileID: 8300000, guid: bc4acbb9138e94c17bcbbb66ee3ede47, type: 3}
+  detectionSound: {fileID: 8300000, guid: eb11b4d0b4b7e40f0b08140e1a446ccb, type: 3}
 --- !u!1 &7223323252355803773
 GameObject:
   m_ObjectHideFlags: 0

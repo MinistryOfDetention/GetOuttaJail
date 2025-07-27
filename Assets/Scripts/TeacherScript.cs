@@ -23,12 +23,14 @@ public class TeacherScript : MonoBehaviour
 
     public GameObject stunIconPrefab;
     private GameObject stunIcon;
+    private float startingSpeed;
     private UnityEngine.AI.NavMeshAgent agent;
     private Vector3 nextDest;
     private bool playerDetected = false;
 
     private bool isPatrolling = true;
     private bool isChasing = false;
+    private bool isMoving = false;
 
     public float waitTime = 0.0f;
     private float defaultWaitTime = 1.0f;
@@ -36,10 +38,15 @@ public class TeacherScript : MonoBehaviour
     private Animator animator;
     private Vector2 lastDirection = Vector2.zero;
 
+    // Audio
+    public CharacterAudio characterAudio;
+    public bool walkingTimerActive = false;
+    public float footStepInterval = 0.45f;
     private Boolean Stunned = false;
 
     void Start()
     {
+        startingSpeed = speed;
         animator = GetComponentInChildren<Animator>();
         if (animator == null)
         {
@@ -48,7 +55,7 @@ public class TeacherScript : MonoBehaviour
         visionCone = transform.GetChild(0);
         nextDest = transform.position;
 
-        if (isPatrolling && currentPatrolWaypointIndex < patrolWaypoints.Length)
+        if (isPatrolling && patrolWaypoints.Length > 0 && currentPatrolWaypointIndex < patrolWaypoints.Length)
         {
             target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
         }
@@ -211,7 +218,7 @@ public class TeacherScript : MonoBehaviour
                         target = patrolWaypoints[currentPatrolWaypointIndex].gameObject;
                     }
                 }
-                else
+                else if (target)
                 {
                     float distanceToTarget = Vector3.Magnitude(target.transform.position - transform.position);
                     if (isPatrolling && distanceToTarget < 1.0f)
@@ -254,6 +261,17 @@ public class TeacherScript : MonoBehaviour
     {
         float timer = stunTime;
 
+        if (Vector3.Magnitude(transform.position - nextDest) < 0.01)
+        {
+            var nextHop = Astar();
+            nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
+            isMoving = false;
+        }
+        else
+        {
+            isMoving = true;
+        }
+
         while (timer > 0)
         {
             yield return null;
@@ -272,6 +290,17 @@ public class TeacherScript : MonoBehaviour
         {
             StopCoroutine(StunCoroutine);
             Destroy(stunIcon);
+        }
+
+        stunIcon = Instantiate(stunIconPrefab, transform.position + Vector3.up * 2.5f, Quaternion.identity);
+        if (isMoving && !walkingTimerActive)
+        {
+            HandleFootstepAudio();
+        }
+
+        if (isMoving && !walkingTimerActive)
+        {
+            HandleFootstepAudio();
         }
 
         stunIcon = Instantiate(stunIconPrefab, transform.position + Vector3.up * 2.5f, Quaternion.identity);
@@ -298,12 +327,24 @@ public class TeacherScript : MonoBehaviour
 
     public void TogglePatrolling()
     {
+        if (isPatrolling)
+        {
+            return; // Already patrolling, no need to toggle again
+        }
+        speed = startingSpeed; // Reset speed to original when patrolling
         isPatrolling = true;
         isChasing = false;
+
     }
 
     public void ToggleChasing()
     {
+        if (isChasing)
+        {
+            return; // Already chasing, no need to toggle again
+        }
+        speed *= 2; // Increase speed when chasing
+        characterAudio.PlayClip("detection");
         isPatrolling = false;
         isChasing = true;
     }
@@ -347,5 +388,25 @@ public class TeacherScript : MonoBehaviour
             animator.Play("TeacherMoveDown");
         }
         lastDirection = direction;
+    }
+
+
+    public void HandleFootstepAudio()
+    {
+        if (!walkingTimerActive)
+        {
+            StartCoroutine(FootstepCooldown());
+        }
+    }
+
+    private IEnumerator FootstepCooldown()
+    {
+        walkingTimerActive = true;
+        yield return new WaitForSeconds(footStepInterval);
+        if (characterAudio != null)
+        {
+            characterAudio.PlayClip("footsteps");
+        }
+        walkingTimerActive = false;
     }
 }
