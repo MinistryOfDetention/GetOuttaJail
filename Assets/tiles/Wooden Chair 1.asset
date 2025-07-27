@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Wooden Chair 1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: ceec612527af447139fa9a2ebc6c1797, type: 3}
+  m_Sprite: {fileID: -42806769, guid: ac680797fc5ff4c83908e84f7674a2cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

@@ -5,6 +5,7 @@ using System.Data.Common;
 using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
 
 public class PlayerCollisionMovement : MonoBehaviour
@@ -35,8 +36,10 @@ public class PlayerCollisionMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        dm = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>();
+        if (SceneManager.GetActiveScene().name == "bathroom")
+        {
+            dm = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>();
+        }
     }
 
     void Update()
@@ -103,7 +106,7 @@ public class PlayerCollisionMovement : MonoBehaviour
         {
             var inventory = GetComponent<Inventory>();
             var penItem = inventory.RemoveItem("pen item");
-            
+
             if (penItem != null)
             {
                 var bulletRotationAngle = Vector3.SignedAngle(Vector3.up, lastMovementDir, Vector3.forward);
@@ -111,7 +114,7 @@ public class PlayerCollisionMovement : MonoBehaviour
                 GameObject penBullet = (GameObject)Instantiate(penBulletPrefab, transform.position, bulletRotation);
                 penBullet.GetComponent<PenProjectile>().itemDrop = penItem;
             }
-            
+
         }
     }
 
@@ -161,7 +164,7 @@ public class PlayerCollisionMovement : MonoBehaviour
     }
 
     IEnumerator FootstepTimer(float time)
-    {   
+    {
         walkingTimerActive = true;
         yield return new WaitForSeconds(time);
         walkingTimerActive = false;

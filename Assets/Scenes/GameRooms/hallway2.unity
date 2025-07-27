@@ -1587,11 +1587,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3002189847259129448, guid: 5c73c5d2201f42546ba68bd1d8750349, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 3002189847259129448, guid: 5c73c5d2201f42546ba68bd1d8750349, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.91
+      value: 5.98
       objectReference: {fileID: 0}
     - target: {fileID: 3002189847259129448, guid: 5c73c5d2201f42546ba68bd1d8750349, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1628,6 +1628,14 @@ PrefabInstance:
     - target: {fileID: 3060358293465473316, guid: 5c73c5d2201f42546ba68bd1d8750349, type: 3}
       propertyPath: m_Name
       value: ExitDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941039646075932499, guid: 5c73c5d2201f42546ba68bd1d8750349, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941039646075932499, guid: 5c73c5d2201f42546ba68bd1d8750349, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -324153805
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1872,6 +1880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teacher
       objectReference: {fileID: 0}
+    - target: {fileID: 1615986954721027736, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: sex
+      value: Male
+      objectReference: {fileID: 0}
     - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.1
@@ -1924,6 +1936,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8182647665917001198, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -1955,11 +1979,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1390467594712679395, guid: 56883bdf992897d40881bfd5bd3e9332, type: 3}
       propertyPath: m_Size.x
-      value: 5.96
+      value: 6.62
       objectReference: {fileID: 0}
     - target: {fileID: 1390467594712679395, guid: 56883bdf992897d40881bfd5bd3e9332, type: 3}
       propertyPath: m_Size.y
       value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390467594712679395, guid: 56883bdf992897d40881bfd5bd3e9332, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: 1390467594712679395, guid: 56883bdf992897d40881bfd5bd3e9332, type: 3}
       propertyPath: m_Offset.y
@@ -2082,6 +2110,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -336367009, guid: 4182e6ebf45be4bfdbaddf9aaa137c57, type: 3}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8046851824061203557, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: m_Sprite
       value: 
