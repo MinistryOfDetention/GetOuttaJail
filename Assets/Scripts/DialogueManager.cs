@@ -31,6 +31,7 @@ public class DialogueManager : MonoBehaviour
         // textDisplay.alignment = TextAlignmentOptions.Midline;
         speakerIndex = 0;
         // textDisplay.rectTransform.position = Camera.main.WorldToScreenPoint(speakers[speakerIndex].position + new Vector3(0, 1, 0));
+        
         currentSpeaker = speakers[speakerIndex].transform.GetChild(1).gameObject;
     }
 
