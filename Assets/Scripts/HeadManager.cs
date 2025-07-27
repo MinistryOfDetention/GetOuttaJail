@@ -132,7 +132,6 @@ public class HeadManager : MonoBehaviour
                 headRenderer.sprite = TriangleHeadSpritesFemale[0];
                 break;
         }
-        Debug.Log("SetFacingDown called for: " + headType + sex);
     }
 
 }

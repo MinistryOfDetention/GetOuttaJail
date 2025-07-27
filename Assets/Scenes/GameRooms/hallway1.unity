@@ -127,6 +127,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9205322741146173698, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
   m_PrefabInstance: {fileID: 554608405}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &25274595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9205322741146173698, guid: 14bac18fe2043784390bb2e1a15fe337, type: 3}
+  m_PrefabInstance: {fileID: 554608405}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &425465422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,7 +2395,7 @@ SpriteRenderer:
   m_SortingLayerID: -324153805
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2022446341, guid: 0a89b14ffd6064e0e97496f560c47272, type: 3}
+  m_Sprite: {fileID: 587626737, guid: 0a89b14ffd6064e0e97496f560c47272, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
@@ -3473,6 +3478,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: canSeeThroughDisguises.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.data[2]
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8925668127991415170, guid: b25b23973451be046a37337a2060607d, type: 3}

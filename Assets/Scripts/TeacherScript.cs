@@ -243,6 +243,16 @@ public class TeacherScript : MonoBehaviour
                 {
                     var nextHop = Astar();
                     nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
+                    isMoving = false;
+                }
+                else
+                {
+                    isMoving = true;
+                }
+
+                if (isMoving && !walkingTimerActive)
+                {
+                    HandleFootstepAudio();
                 }
 
                 // Move towards the next destination
@@ -268,12 +278,8 @@ public class TeacherScript : MonoBehaviour
         {
             var nextHop = Astar();
             nextDest = tilemap.CellToWorld(nextHop) + new Vector3(0.5f, 0.5f, 0.5f);
-            isMoving = false;
         }
-        else
-        {
-            isMoving = true;
-        }
+
 
         while (timer > 0)
         {
@@ -297,10 +303,6 @@ public class TeacherScript : MonoBehaviour
         }
 
         stunIcon = Instantiate(stunIconPrefab, transform.position + Vector3.up * 2.5f, Quaternion.identity);
-        if (isMoving && !walkingTimerActive)
-        {
-            HandleFootstepAudio();
-        }
 
         StunCoroutine = StunIEnumerator();
 
