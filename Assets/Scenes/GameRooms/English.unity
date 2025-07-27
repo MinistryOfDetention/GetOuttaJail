@@ -3775,6 +3775,99 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1116cd3a26952749bd6d5a42d6261c0, type: 3}
+--- !u!1001 &1583974360
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 450701861863634916, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: m_Name
+      value: Teacher
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615986954721027736, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: headType
+      value: Square
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.111544
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7745248
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3053554144868998197, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: tilemap
+      value: 
+      objectReference: {fileID: 1671827052}
+    - target: {fileID: 3053554144868998197, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: patrolWaypoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3053554144868998197, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: patrolWaypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1756855334}
+    - target: {fileID: 3053554144868998197, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: patrolWaypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1549296970}
+    - target: {fileID: 3053554144868998197, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: patrolWaypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 943742245}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b25b23973451be046a37337a2060607d, type: 3}
 --- !u!4 &1660881706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4420633064422206994, guid: 56883bdf992897d40881bfd5bd3e9332, type: 3}
@@ -6411,6 +6504,7 @@ SceneRoots:
   - {fileID: 752272401}
   - {fileID: 648055770}
   - {fileID: 518198045}
+  - {fileID: 1583974360}
   - {fileID: 1012352310}
   - {fileID: 93731246}
   - {fileID: 943742244}

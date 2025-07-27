@@ -189,10 +189,6 @@ PrefabInstance:
       propertyPath: sex
       value: Male
       objectReference: {fileID: 0}
-    - target: {fileID: 1615986954721027736, guid: b25b23973451be046a37337a2060607d, type: 3}
-      propertyPath: headType
-      value: Circle
-      objectReference: {fileID: 0}
     - target: {fileID: 1715753266785009102, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.3529925
@@ -263,11 +259,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: canSeeThroughDisguises.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: canSeeThroughDisguises.Array.data[1]
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603063201308324264, guid: b25b23973451be046a37337a2060607d, type: 3}
+      propertyPath: canSeeThroughDisguises.Array.data[2]
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8925668127991415170, guid: b25b23973451be046a37337a2060607d, type: 3}
       propertyPath: m_Controller
