@@ -5,12 +5,14 @@ using System.Data.Common;
 using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
 
 public class PlayerCollisionMovement : MonoBehaviour
 {
     public float moveSpeed = 5;
     public GameObject penBulletPrefab;
+    public DialogueManager dm;
     private Rigidbody2D rb;
     private Vector2 movement;
     private Vector2 lastMovementDir;
@@ -34,13 +36,25 @@ public class PlayerCollisionMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (SceneManager.GetActiveScene().name == "bathroom")
+        {
+            dm = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>();
+        }
     }
 
     void Update()
     {
+        HandleAnimations();
+
+        // Stop controls if dialogue is happening
+        if (dm && !dm.dialogueEnd)
+        {
+            movement = Vector2.zero;
+            return;
+        }
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-
 
         bool horizontalChanged = horizontal != previousHorizontal;
         bool verticalChanged = vertical != previousVertical;
@@ -92,7 +106,7 @@ public class PlayerCollisionMovement : MonoBehaviour
         {
             var inventory = GetComponent<Inventory>();
             var penItem = inventory.RemoveItem("pen item");
-            
+
             if (penItem != null)
             {
                 var bulletRotationAngle = Vector3.SignedAngle(Vector3.up, lastMovementDir, Vector3.forward);
@@ -100,7 +114,7 @@ public class PlayerCollisionMovement : MonoBehaviour
                 GameObject penBullet = (GameObject)Instantiate(penBulletPrefab, transform.position, bulletRotation);
                 penBullet.GetComponent<PenProjectile>().itemDrop = penItem;
             }
-            
+
         }
     }
 
@@ -150,7 +164,7 @@ public class PlayerCollisionMovement : MonoBehaviour
     }
 
     IEnumerator FootstepTimer(float time)
-    {   
+    {
         walkingTimerActive = true;
         yield return new WaitForSeconds(time);
         walkingTimerActive = false;

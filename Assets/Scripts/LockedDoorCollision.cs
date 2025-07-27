@@ -5,24 +5,37 @@ using UnityEngine.SceneManagement;
 
 public class LockedDoorCollision : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public DialogueManager dm;
+
+    public bool isEndgame = false;
+
+    private void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        dm = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // Trigger locked door dialogue.
-            Debug.Log("Door is locked...");
+            if (!isEndgame)
+            {
+                // Trigger locked door dialogue.
+                //Debug.Log("Door is locked...");
+                dm.AddDialogue(new string[] {
+                "Hmm... the door's locked.",
+                "I'll need a key for this door.",
+                "Maybe the principal will have the key..."
+            });
+                LevelMaster.playerInDialogue = true;
+            }
+            else
+            {
+                dm.AddDialogue(new string[] {
+                    "The key worked! I'm free!!"
+                });
+                LevelMaster.inEndgameDialogue = true;
+            }
         }
     }
 }
