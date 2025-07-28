@@ -1,5 +1,5 @@
 # Chris' Big Escape
-2D, top-down, puzzle, stealh game made in 48 hours for Otago Computing Students Society Game Jame 2025.
+2D, top-down, puzzle, stealth game made in 48 hours for Otago Computing Students Society Game Jame 2025.
 The theme of the game jam was "Simulacrum".
 
 [Play it on itch.io here!](https://akirasaur.itch.io/chris-big-escape)
